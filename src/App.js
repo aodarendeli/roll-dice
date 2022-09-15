@@ -56,7 +56,10 @@ function App() {
     width:navState? '550px':'200px',
     transition:'.5s'
     
-  }}/>
+  }}>
+  <Marque />
+
+    </div>
       </div>
   );
 }
