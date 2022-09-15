@@ -1,8 +1,8 @@
 import React from 'react'
 import {FaUser} from 'react-icons/fa'
 import './sidebar.css'
-import Logo from '../../Svg/index'
-import Select from '../../Svg/select'
+import Logo from '../../svg/index'
+import Select from '../../svg/select'
 
 
 function Sidebar() {
@@ -30,43 +30,43 @@ function Sidebar() {
                     <Select />
                 </div>
                 <li>
-                    <a>
+                    <a className='nav-tab'>
                         <span className="icon"><FaUser className='mx-1' /></span>
                         <span className="title">Home</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a className='nav-tab'>
                         <span className="icon"><FaUser className='mx-1' /></span>
                         <span className="title">Profile</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a className='nav-tab'>
                         <span className="icon"><FaUser className='mx-1' /></span>
                         <span className="title">Messages</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a className='nav-tab'>
                         <span className="icon"><FaUser className='mx-1' /></span>
                         <span className="title">Help</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a className='nav-tab'>
                         <span className="icon"><FaUser className='mx-1' /></span>
                         <span className="title">Setting</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a className='nav-tab'>
                         <span className="icon"><FaUser className='mx-1' /></span>
                         <span className="title">Password</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a className='nav-tab'>
                         <span className="icon"><FaUser className='mx-1' /></span>
                         <span className="title">Sign Out</span>
                     </a>

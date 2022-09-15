@@ -1,0 +1,17 @@
+.marquee div {
+  cursor: pointer;
+}
+
+.overlay::before,
+.overlay::after {
+  background: transparent !important;
+}
+
+.profileMeta {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: #ffcc9c;
+  padding: 10px;
+  opacity: 1;
+  cursor: pointer;
+}
