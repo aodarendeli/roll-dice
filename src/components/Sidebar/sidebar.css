@@ -121,9 +121,3 @@ header {
     }
 }
 
-:root {
-    --bg-primary: #41444b;
-    --bg-secondary: #52575d;
-    --bg-active: #fddb3a;
-    --cl-text: #f6f4e6;
-}
