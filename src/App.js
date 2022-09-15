@@ -48,13 +48,6 @@ function App() {
          </Routes>
        </div>
      </Router>
-<<<<<<< HEAD
-  <Sidebar />
-  <div>
-  <Marque />
-  </div>
-  
-=======
   <Sidebar setNav={(val)=>setNavState(val)} />
   <div 
   style={{
@@ -64,7 +57,6 @@ function App() {
     transition:'.5s'
     
   }}/>
->>>>>>> a44b43b6656ed2a0a767a9c7ee1c2e51ed82e0fb
       </div>
   );
 }
