@@ -6,7 +6,7 @@ function App() {
       <>
       <Sidebar />
       <div className='text-center'>
-        merhaba
+        merhaba yarr
       </div>
       </>
   );
