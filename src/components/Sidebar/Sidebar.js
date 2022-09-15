@@ -13,11 +13,13 @@ function Sidebar(props) {
         let navValue = document.querySelector('nav');
         navValue.classList.toggle('active');
         setNavActive(!navActive)
-        setGamesVisibility(!gamesVisibility)
+        setGamesVisibility(false)
         props.setNav(!navActive)
         console.log('tıkladın');
     }
     const toggleGamesVisibility =()=>{
+        setGamesVisibility(!gamesVisibility)
+
     }
   return (
     <>
@@ -49,7 +51,7 @@ function Sidebar(props) {
                         <span className="title">Games</span>
                     </a>
                 </li>
-                <div style={{display:gamesVisibility ? 'block':'none',marginLeft:'30px',transition:'.5s'}}>
+                <div style={{display:gamesVisibility ? 'block':'none',marginLeft:'0px',transition:'.5s'}}>
                 <li>
                     <a className='nav-tab'>
                         <span className="icon"><FaUser className='mx-1' /></span>

@@ -13,8 +13,9 @@ ol, ul {
     background: #222222;
     transition: .5s;
     overflow: hidden;
-    border-radius: 5px;
     z-index: 999999;
+    border-right: 5px solid rgb(52,185,185);
+
 }
 
 nav.active {
