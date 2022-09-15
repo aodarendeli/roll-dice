@@ -2,11 +2,19 @@ ol, ul {
     padding-left: 0rem !important;
 }
 
-nav {
+#dark nav  {
     position: fixed;
     width: 60px;
     height: 100%;
     background: var(--bg-secondary);
+    transition: .5s;
+    overflow: hidden;
+}
+#light nav  {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: red;
     transition: .5s;
     overflow: hidden;
 }

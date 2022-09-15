@@ -14,9 +14,20 @@ body {
   font-family: "Poppins", "robotoregular", sans-serif;
 }
 
+.gradientHorizontal{
+  background: rgb(52,185,185);
+  background: linear-gradient(90deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
+}
+
+.gradientVertical{
+  background: rgb(52,185,185);
+  background: linear-gradient(0deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
+}
+
 :root {
   --bg-primary: #41444b;
   --bg-secondary: #52575d;
   --bg-active: #fddb3a;
   --cl-text: #f6f4e6;
+  --bg-light-primary:#e5e5e5;
 }
