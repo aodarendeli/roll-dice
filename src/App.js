@@ -11,7 +11,7 @@ export const ThemeContext = createContext(null);
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark')
-  const [navState, setNavState] = useState(localStorage.getItem('theme') || 'dark')
+  const [navState, setNavState] = useState(false)
   const themeVal = useSelector((selector) => selector?.themeReducer?.value)
   useEffect(() => {
     console.log(navState)
@@ -31,14 +31,6 @@ function App() {
   }
   return (
       <div className="App" id={theme}>
-        {/* <div 
-          onClick={themeDark}
-          >dark</div>
-          <div 
-          onClick={themeLight}
-          >light</div>
-          <div className="switch">
-        </div> */}
        <Router>
        <div className={theme}>
          <Routes>
@@ -49,17 +41,13 @@ function App() {
        </div>
      </Router>
   <Sidebar setNav={(val)=>setNavState(val)} />
-  <div 
-  style={{
-    border:'1px solid red',
-    height:'100vh',
-    width:navState? '550px':'200px',
+<div style={{
+    marginLeft:navState? '180px':'40px',
     transition:'.5s'
     
-  }}>
+  }} >
   <Marque />
-
-    </div>
+</div>
       </div>
   );
 }
