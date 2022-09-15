@@ -22,7 +22,7 @@ function Sidebar() {
                 <FaUser className='mx-1' />
             </a>
         </header>
-        <div className='sidebar__container'>
+        <div id='sidebar__container'>
            <nav>
             <ul>
                 <div className='text-center'>

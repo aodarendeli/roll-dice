@@ -1,6 +1,11 @@
 .marquee div {
   cursor: pointer;
 }
+.marque__background{
+  padding-bottom: 20px;
+  background: rgb(52,185,185);
+  background: linear-gradient(90deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
+}
 
 .overlay::before,
 .overlay::after {
@@ -10,7 +15,8 @@
 .profileMeta {
   border: 1px solid transparent;
   border-radius: 15px;
-  background-color: #ffcc9c;
+  background: rgb(52,185,185);
+  background: linear-gradient(90deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
   padding: 10px;
   opacity: 1;
   cursor: pointer;

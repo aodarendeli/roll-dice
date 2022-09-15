@@ -5,6 +5,7 @@ import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import RollDice from './pages/rollDice'
 import CoinFlip from './pages/coinFlip'
+import Marque from './components/marque/index'
 
 export const ThemeContext = createContext(null);
 
@@ -25,14 +26,14 @@ function App() {
   }
   return (
       <div className="App" id={theme}>
-        <div 
-onClick={themeDark}
->dark</div>
-<div 
-onClick={themeLight}
->light</div>
-<div className="switch">
-</div>
+        {/* <div 
+          onClick={themeDark}
+          >dark</div>
+          <div 
+          onClick={themeLight}
+          >light</div>
+          <div className="switch">
+        </div> */}
        <Router>
        <div className={theme}>
          <Routes>
@@ -43,6 +44,10 @@ onClick={themeLight}
        </div>
      </Router>
   <Sidebar />
+  <div>
+  <Marque />
+  </div>
+  
       </div>
   );
 }
