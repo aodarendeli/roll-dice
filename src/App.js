@@ -3,6 +3,8 @@ import Sidebar from './components/Sidebar/Sidebar';
 import {createContext,useState,useEffect} from 'react'
 import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import {useSelector} from 'react-redux'
+import RollDice from './pages/rollDice'
+import CoinFlip from './pages/coinFlip'
 
 export const ThemeContext = createContext(null);
 
@@ -35,8 +37,8 @@ onClick={themeLight}
        <div className={theme}>
          <Routes>
            {/* <Route path='/' element={<Dashboard />} /> */}
-           {/* <Route path='/games/dice' element={<RollDice />} /> */}
-           {/* <Route path='/games/coin' element={<CoinFlip />} /> */}
+           <Route path='/games/dice' element={<RollDice />} />
+           <Route path='/games/coin' element={<CoinFlip />} />
          </Routes>
        </div>
      </Router>
