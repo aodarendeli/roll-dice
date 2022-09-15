@@ -1,52 +1,43 @@
+.sidebar__container{
+    background-color: red;
+}
+
 ol, ul {
     padding-left: 0rem !important;
 }
 
-#dark nav  {
+ nav  {
     position: fixed;
     width: 60px;
     height: 100%;
-    background: var(--bg-secondary);
+    background: #222222;
     transition: .5s;
     overflow: hidden;
-}
-#light nav  {
-    position: fixed;
-    width: 60px;
-    height: 100%;
-    background: red;
-    transition: .5s;
-    overflow: hidden;
+    border-radius: 5px;
 }
 
 nav.active {
-    width: 300px;
+    width: 180px;
 }
-
-/* nav:hover {
-    width: 300px;
-} */
 
 nav ul {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    color: white;
 }
 
 nav ul li {
     list-style: none;
     width: 100%;
+    color: white;
     position: relative;
 
 }
 
-nav ul li a:hover {
-    color: var(--bg-primary);
-}
-
 nav ul li:hover a::before {
-    background-color: var(--bg-active);
+    background: #069CC7 0% 0% no-repeat padding-box;;
     width: 100%;
 }
 
@@ -57,7 +48,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--cl-text);
+    color: white;
     transition: .2s;
 }
 
@@ -76,7 +67,7 @@ nav ul li a .icon {
     display: block;
     min-width: 60px;
     height: 60px;
-    line-height: 60px;
+    line-height: 55px;
     text-align: center;
 }
 

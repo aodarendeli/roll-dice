@@ -1,11 +1,15 @@
 import React from 'react'
 import {FaUser} from 'react-icons/fa'
 import './sidebar.css'
+import Logo from '../../Svg/index'
+import Select from '../../Svg/select'
+
 
 function Sidebar() {
     const handleClick = () => {
         let navValue = document.querySelector('nav');
         navValue.classList.toggle('active');
+        console.log('tıkladın');
     }
   return (
     <>
@@ -18,58 +22,58 @@ function Sidebar() {
                 <FaUser className='mx-1' />
             </a>
         </header>
-        <nav>
-        <ul>
-            <li>
-                <a onClick={handleClick} className="toggle">
-                    <span className="icon"><FaUser className='mx-1' /></span>
-                    <span className="title">Menu</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <span className="icon"><FaUser className='mx-1' /></span>
-                    <span className="title">Home</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <span className="icon"><FaUser className='mx-1' /></span>
-                    <span className="title">Profile</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <span className="icon"><FaUser className='mx-1' /></span>
-                    <span className="title">Messages</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <span className="icon"><FaUser className='mx-1' /></span>
-                    <span className="title">Help</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <span className="icon"><FaUser className='mx-1' /></span>
-                    <span className="title">Setting</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <span className="icon"><FaUser className='mx-1' /></span>
-                    <span className="title">Password</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <span className="icon"><FaUser className='mx-1' /></span>
-                    <span className="title">Sign Out</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+        <div className='sidebar__container'>
+           <nav>
+            <ul>
+                <div className='text-center'>
+                    <Logo onClick={handleClick} className="toggle mx-2" />
+                    <Select />
+                </div>
+                <li>
+                    <a>
+                        <span className="icon"><FaUser className='mx-1' /></span>
+                        <span className="title">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span className="icon"><FaUser className='mx-1' /></span>
+                        <span className="title">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span className="icon"><FaUser className='mx-1' /></span>
+                        <span className="title">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span className="icon"><FaUser className='mx-1' /></span>
+                        <span className="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span className="icon"><FaUser className='mx-1' /></span>
+                        <span className="title">Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span className="icon"><FaUser className='mx-1' /></span>
+                        <span className="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span className="icon"><FaUser className='mx-1' /></span>
+                        <span className="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        </div>
     </>
   )
 }
