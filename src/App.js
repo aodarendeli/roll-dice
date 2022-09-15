@@ -10,7 +10,12 @@ export const ThemeContext = createContext(null);
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark')
+  const [navState, setNavState] = useState(localStorage.getItem('theme') || 'dark')
   const themeVal = useSelector((selector) => selector?.themeReducer?.value)
+  useEffect(() => {
+    console.log(navState)
+  }, [navState])
+  
   useEffect(() => {
     setTheme(localStorage.getItem('theme'))
   }, [localStorage.getItem('theme')])
@@ -42,7 +47,15 @@ onClick={themeLight}
          </Routes>
        </div>
      </Router>
-  <Sidebar />
+  <Sidebar setNav={(val)=>setNavState(val)} />
+  <div 
+  style={{
+    border:'1px solid red',
+    height:'100vh',
+    width:navState? '550px':'200px',
+    transition:'.5s'
+    
+  }}/>
       </div>
   );
 }
