@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {store, persistedStore} from './Redux/Store/store'
 import {PersistGate} from 'redux-persist/integration/react'
 import DefaultModal from './components/DefaultModal'
+import Foooter from './components/Footer/Foooter'
+// import Dice from './pages/rollDice'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -17,6 +19,8 @@ root.render(
       <PersistGate loading={null} persistor={persistedStore}>
         <App />
         <DefaultModal />
+        {/* <Dice/> */}
+        <Foooter/>
       </PersistGate>
     </Provider>
   </React.StrictMode>

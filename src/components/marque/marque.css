@@ -2,7 +2,8 @@
   cursor: pointer;
 }
 .marque__background{
-  padding-bottom: 20px;
+  height: 64px;
+  padding-bottom: 25px;
   background: rgb(52,185,185);
   background: linear-gradient(90deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
 }
@@ -12,12 +13,70 @@
   background: transparent !important;
 }
 
-.profileMeta {
+.profileMetaWhite {
   border: 1px solid transparent;
   border-radius: 15px;
-  background: rgb(52,185,185);
-  background: linear-gradient(90deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
+  height: 40px;
+  background-color: #F0F0F0;
+  /* background: rgb(52,185,185);
+  background: linear-gradient(90deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%); */
   padding: 10px;
   opacity: 1;
   cursor: pointer;
+}
+.profileMeta {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  height: 40px;
+  background: #62D8AC;
+  padding: 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+.profileMetaBlue {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  height: 40px;
+  background-color: #2366D3;
+  padding: 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.connect-wallet{
+  background: transparent linear-gradient(180deg, #2366D3 0%, #069CC7 50%, #62D8AC 100%) 0% 0% no-repeat padding-box;
+  border: 1px solid #069CC7;
+  border-radius: 0px 0px 0px 20px;
+  width: 200px;
+  height: 64px;
+}
+.connect-wallet span{
+  font-size: 15px;
+  font-weight: bolder;
+}
+.connect-wallet svg{
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-toggle{
+  background-color: #222;
+  border: 1px solid rgb(52,185,185) !important;
+  opacity: 1 !important;
+}
+.dropdown-toggle:hover{
+  opacity: 1 !important;
+  background-color: none !important;
+  color: none !important;
+}
+.dropdown-menu.show{
+  background-color: #222;
+}
+.wallet-dropdown span{
+  color: #f0f0f0;
+  font-size: 16px;
+}
+.wallet-dropdown svg{
+  width: 20px;
+  height: 20px;
 }
