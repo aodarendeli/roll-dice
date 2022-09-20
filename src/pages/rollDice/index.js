@@ -5,7 +5,6 @@ import SmallDice from '../../components/smallDice'
 import Dollar from '../../svg/Dollar'
 import Amount from '../../svg/Amount'
 import UpChart from '../../svg/UpChart'
-import Trophy from '../../svg/Trophy'
 import Dropdown from 'react-bootstrap/Dropdown'
 import ReactDice from 'react-dice-complete'
 import 'react-dice-complete/dist/react-dice-complete.css'
@@ -114,21 +113,20 @@ export default () => {
               </div>
             </div>
             <div>
-              <div className='d-flex pt-3 w-100'>
-                <UpChart />
+              <div className='d-flex align-items-center'>
+                <Dollar />
                 <p className={c.title}>Multiplier:</p>
-                <p className={c.title + ' ' + c.colorGreen}>
-                  {multiplierValue === 0 ? 'x-' : 'x' + multiplierValue}
-                </p>
+                <p className={c.title + ' ' + c.colorGreen}></p>
               </div>
-              <div className='d-flex pt-3 w-100'>
-                <Trophy />
+              <div className='d-flex align-items-center'>
+                <Dollar />
                 <p className={c.title}>Win Amount:</p>
-                <p className={c.title + ' ' + c.colorGreen}>
-                  {winAmountValue === 0 ? '-' : winAmountValue}
-                </p>
+                <p className={c.title + ' ' + c.colorGreen}></p>
               </div>
             </div>
+          </div>
+          <div className={c.rollButton + ' gradientHorizontal'}>
+            <p className={c.rollText}>ROLL!</p>
           </div>
         </div>
       </div>

@@ -6,14 +6,16 @@ const Menu = () => {
   const [navState, setNavState] = useState(false)
   return (
     <div>
-          <Sidebar setNav={(val)=>setNavState(val)} />
-            <div className='marque-container' style={{
-                marginLeft:navState? '180px':'40px',
-                transition:'.5s'
-                
-                }} >
-                <Marque />
-            </div>
+      <Sidebar setNav={(val) => setNavState(val)} />
+      <div
+        className='marque-container'
+        style={{
+          marginLeft: navState ? '180px' : '40px',
+          transition: '.5s',
+        }}
+      >
+        <Marque />
+      </div>
     </div>
   )
 }
