@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, {useState} from 'react'
 import {FaUser} from 'react-icons/fa'
 import './sidebar.css'
 import Logo from '../../svg/index'
@@ -7,23 +7,21 @@ import Toggle from '../../svg/toggle'
 import BlockChain from '../../svg/blockchain'
 import Select from '../../svg/select'
 
-
 function Sidebar(props) {
-    const [gamesVisibility, setGamesVisibility] = useState(false)
-    const [navActive, setNavActive] = useState(false)
+  const [gamesVisibility, setGamesVisibility] = useState(false)
+  const [navActive, setNavActive] = useState(false)
 
-    const handleClick = () => {
-        let navValue = document.querySelector('nav');
-        navValue.classList.toggle('active');
-        setNavActive(!navActive)
-        setGamesVisibility(false)
-        props.setNav(!navActive)
-        console.log('tıkladın');
-    }
-    const toggleGamesVisibility =()=>{
-        setGamesVisibility(!gamesVisibility)
-
-    }
+  const handleClick = () => {
+    let navValue = document.querySelector('nav')
+    navValue.classList.toggle('active')
+    setNavActive(!navActive)
+    setGamesVisibility(false)
+    props.setNav(!navActive)
+    console.log('tıkladın')
+  }
+  const toggleGamesVisibility = () => {
+    setGamesVisibility(!gamesVisibility)
+  }
   return (
     <>
         <header>
@@ -138,7 +136,7 @@ function Sidebar(props) {
                 </li>
             </ul>
         </nav>
-        </div>
+      </div>
     </>
   )
 }

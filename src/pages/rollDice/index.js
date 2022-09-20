@@ -11,7 +11,7 @@ import ReactDice from 'react-dice-complete'
 import 'react-dice-complete/dist/react-dice-complete.css'
 import {useDispatch} from 'react-redux'
 import {setDefaultModal, setWarningModal} from '../../Redux/Actions/element'
-
+import DiceImg from '../../assets/images/diceimg.png'
 export default () => {
   const [pendingValue, setPendingValue] = useState(0)
   const [multiplierValue, setMultiplierValue] = useState(0)
@@ -66,6 +66,77 @@ export default () => {
   }, [diceSelections])
   return (
     <>
+      <div className={c.con + ' mt-5'}>
+        <div className={c.gameCon}>
+          <div className={c.pendingCont}>
+            <p className={c.pendingT}>Pending</p>
+          </div>
+          <div className={c.newDiceCon}>
+            <div className={c.diceDivider}>
+              <div className={c.newDiceSelection}>
+                <div className={c.diceDivider}>
+                  <Dice num={1} selector={(val) => handleDiceSelect(val)} />
+                  <Dice num={2} selector={(val) => handleDiceSelect(val)} />
+                  <Dice num={3} selector={(val) => handleDiceSelect(val)} />
+                </div>
+                <div className={c.diceDivider}>
+                  <Dice num={4} selector={(val) => handleDiceSelect(val)} />
+                  <Dice num={5} selector={(val) => handleDiceSelect(val)} />
+                  <Dice num={6} selector={(val) => handleDiceSelect(val)} />
+                </div>
+              </div>
+            </div>
+            <img src={DiceImg} className={c.containImg} alt='contain' />
+          </div>
+          <div className={c.betField}>
+            <div>
+              <p
+                style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}
+              >
+                Bet
+              </p>
+              <div>
+                <div className={c.amountValue}>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginRight: '30px'}}
+                  >
+                    Min
+                  </div>
+                  <div className={c.amounTotal}>1000</div>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginLeft: '30px'}}
+                  >
+                    Max
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className='d-flex pt-3 w-100'>
+                <UpChart />
+                <p className={c.title}>Multiplier:</p>
+                <p className={c.title + ' ' + c.colorGreen}>
+                  {multiplierValue === 0 ? 'x-' : 'x' + multiplierValue}
+                </p>
+              </div>
+              <div className='d-flex pt-3 w-100'>
+                <Trophy />
+                <p className={c.title}>Win Amount:</p>
+                <p className={c.title + ' ' + c.colorGreen}>
+                  {winAmountValue === 0 ? '-' : winAmountValue}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+/*
+ <div>
       <div className={c.con + ' mt-5'}>
         <div className={c.gameCon}>
           <div className={c.mobileDice}>
@@ -282,6 +353,5 @@ export default () => {
           </div>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+*/

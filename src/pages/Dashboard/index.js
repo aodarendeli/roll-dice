@@ -13,8 +13,8 @@ function index() {
             </div>
             {/* <div className='col-4'>
             </div> */}
-          </div>
         </div>
+      </div>
     </div>
   )
 }

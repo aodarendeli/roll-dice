@@ -7,24 +7,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #101010 !important;
 }
-.container{
+.container {
   max-width: 1020px !important;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", "robotoregular", sans-serif;
+  font-family: 'Poppins', 'robotoregular', sans-serif;
 }
 
-.gradientHorizontal{
-  background: rgb(52,185,185);
-  background: linear-gradient(90deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
+.gradientHorizontal {
+  background: rgb(52, 185, 185);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 185, 185, 1) 50%,
+    rgba(34, 102, 212, 1) 100%
+  );
 }
 
-.gradientVertical{
-  background: rgb(52,185,185);
-  background: linear-gradient(0deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
+.gradientVertical {
+  background: rgb(52, 185, 185);
+  background: linear-gradient(
+    0deg,
+    rgba(52, 185, 185, 1) 50%,
+    rgba(34, 102, 212, 1) 100%
+  );
 }
 
 :root {
@@ -32,9 +40,9 @@ body {
   --bg-secondary: #52575d;
   --bg-active: #fddb3a;
   --cl-text: #f6f4e6;
-  --bg-light-primary:#e5e5e5;
-  --unnamed-color-f0f0f0: #F0F0F0;
-  --unnamed-color-069cc700: #069CC700;
+  --bg-light-primary: #e5e5e5;
+  --unnamed-color-f0f0f0: #f0f0f0;
+  --unnamed-color-069cc700: #069cc700;
   --unnamed-color-030303: #030303;
   --unnamed-font-family-poppins: Poppins;
   --unnamed-font-style-normal: normal;
@@ -49,5 +57,4 @@ body {
   line-height: var(--unnamed-line-spacing-35);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-f0f0f0);
-
 }
