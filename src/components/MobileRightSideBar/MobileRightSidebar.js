@@ -8,7 +8,7 @@ function MobileRightSidebar() {
     <div className='container mt-3'>
         <div className='row mx-auto'>
             <div className='col-sm-8 mobileRightSideBar  mx-auto'>
-              <div className='d-flex align-items-center'>
+              <div className='d-flex align-items-center mt-2'>
                 <Usd  className="mx-1"/>
                 <span>
                   Recent

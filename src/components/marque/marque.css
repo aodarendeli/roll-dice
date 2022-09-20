@@ -4,12 +4,12 @@
 .marque__background {
   height: 64px;
   padding-bottom: 25px;
-  background: rgb(52, 185, 185);
+  /* background: rgb(52, 185, 185);
   background: linear-gradient(
     90deg,
     rgba(52, 185, 185, 1) 50%,
     rgba(34, 102, 212, 1) 100%
-  );
+  ); */
 }
 
 .overlay::before,
@@ -46,6 +46,51 @@
   opacity: 1;
   cursor: pointer;
 }
+.bootstrapt-container button{
+  border: none !important;
+  background-color: #030303;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+
+}
+.bootstrapt-container button:hover{
+  border: none !important;
+  background-color: #030303 !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+
+}
+.dropdown-menu.show{
+  display: block !important;
+  width: 100% !important;
+  transform: translate(0px, 62px) !important;
+  border-color: rgb(52, 185, 185) !important;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: none !important;
+  background-color:none !important;
+}
+.dropdown-item{
+  background-color: #030303 !important;
+}
+.dropdown-menu{
+  --bs-dropdown-padding-y: 0rem !important;
+}
+
+
+.bootstrapt-container{
+  background-color: #030303 !important;
+  border: 1px solid #030303;
+  border-bottom-left-radius: 10px;
+  border-color: rgb(52, 185, 185);
+  /* position: absolute;
+  top: 0; */
+
+}
+.bootsrapt-svg{
+  width: 30px;
+  height: 30px;
+}
 
 .connect-wallet {
   background: transparent
@@ -66,7 +111,7 @@
 }
 
 .dropdown-toggle {
-  background-color: #222;
+  background-color: #030303;
   border: 1px solid rgb(52, 185, 185) !important;
   opacity: 1 !important;
 }
