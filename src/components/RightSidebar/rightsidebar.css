@@ -49,9 +49,8 @@
   height: 20px;
 }
 
-
 @media (max-width: 992px) {
-    .rightSideBar{
-        display: none;
-    }
+  .rightSideBar {
+    display: none;
+  }
 }

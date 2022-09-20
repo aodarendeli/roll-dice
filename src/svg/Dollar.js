@@ -6,8 +6,8 @@ const SvgComponent = (props) => (
     viewBox='0 0 112 112'
     fill='#fff'
     xmlSpace='preserve'
-    width={22}
-    height={22}
+    width={12}
+    height={12}
     {...props}
   >
     <path

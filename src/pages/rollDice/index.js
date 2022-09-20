@@ -5,7 +5,6 @@ import SmallDice from '../../components/smallDice'
 import Dollar from '../../svg/Dollar'
 import Amount from '../../svg/Amount'
 import UpChart from '../../svg/UpChart'
-import Trophy from '../../svg/Trophy'
 import Dropdown from 'react-bootstrap/Dropdown'
 import ReactDice from 'react-dice-complete'
 import 'react-dice-complete/dist/react-dice-complete.css'
@@ -24,6 +23,7 @@ export default () => {
   const [showResult, setShowResult] = useState({state: false, winStatus: false})
   const dispatch = useDispatch()
   const diceRef = useRef(null)
+
   const handleRoll = (val) => {
     let arr = [...diceSelections]
     let res = arr.filter((dice) => dice === 0)
@@ -71,7 +71,7 @@ export default () => {
           <div className={c.pendingCont}>
             <p className={c.pendingT}>Pending</p>
           </div>
-          <div className={c.newDiceCon}>
+          <div className={c.newDiceConDesktop}>
             <div className={c.diceDivider}>
               <div className={c.newDiceSelection}>
                 <div className={c.diceDivider}>
@@ -86,9 +86,54 @@ export default () => {
                 </div>
               </div>
             </div>
-            <img src={DiceImg} className={c.containImg} alt='contain' />
+            {betState ? (
+              <ReactDice
+                numDice={1}
+                dieSize={80}
+                // rollTime={durationRoll}
+                faceColor={'#fff'}
+                dotColor={'#fff'}
+                defaultRoll={1}
+                disableIndividual
+                rollDone={handleRollDone}
+                ref={diceRef}
+              />
+            ) : (
+              <img src={DiceImg} className={c.containImg} alt='contain' />
+            )}
           </div>
-          <div className={c.betField}>
+          <div className={c.newDiceConMobile}>
+            <div className={c.diceDivider}>
+              <div className={c.newDiceSelection}>
+                <div className={c.diceDivider}>
+                  <Dice num={1} selector={(val) => handleDiceSelect(val)} />
+                  <Dice num={2} selector={(val) => handleDiceSelect(val)} />
+                  <Dice num={3} selector={(val) => handleDiceSelect(val)} />
+                </div>
+                <div className={c.diceDivider}>
+                  <Dice num={4} selector={(val) => handleDiceSelect(val)} />
+                  <Dice num={5} selector={(val) => handleDiceSelect(val)} />
+                  <Dice num={6} selector={(val) => handleDiceSelect(val)} />
+                </div>
+              </div>
+            </div>
+            {betState ? (
+              <ReactDice
+                numDice={1}
+                dieSize={80}
+                // rollTime={durationRoll}
+                faceColor={'#fff'}
+                dotColor={'#fff'}
+                defaultRoll={1}
+                disableIndividual
+                rollDone={handleRollDone}
+                ref={diceRef}
+              />
+            ) : (
+              <img src={DiceImg} className={c.containImg} alt='contain' />
+            )}
+          </div>
+          <div className={c.betFieldDesktop}>
             <div>
               <p
                 style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}
@@ -114,22 +159,71 @@ export default () => {
               </div>
             </div>
             <div>
-              <div className='d-flex pt-3 w-100'>
-                <UpChart />
+              <div className='d-flex align-items-center'>
+                <Dollar />
                 <p className={c.title}>Multiplier:</p>
-                <p className={c.title + ' ' + c.colorGreen}>
-                  {multiplierValue === 0 ? 'x-' : 'x' + multiplierValue}
-                </p>
+                <p className={c.title + ' ' + c.colorGreen}></p>
               </div>
-              <div className='d-flex pt-3 w-100'>
-                <Trophy />
+              <div className='d-flex align-items-center'>
+                <Dollar />
                 <p className={c.title}>Win Amount:</p>
-                <p className={c.title + ' ' + c.colorGreen}>
-                  {winAmountValue === 0 ? '-' : winAmountValue}
-                </p>
+                <p className={c.title + ' ' + c.colorGreen}></p>
               </div>
             </div>
           </div>
+          <div className={c.betFieldMobile}>
+            <div>
+              <p
+                style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}
+              >
+                Bet
+              </p>
+              <div>
+                <div className={c.amountValue}>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginRight: '30px'}}
+                  >
+                    Min
+                  </div>
+                  <div className={c.amounTotal}>1000</div>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginLeft: '30px'}}
+                  >
+                    Max
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className='d-flex align-items-center'>
+                <Dollar />
+                <p className={c.title}>Multiplier:</p>
+                <p className={c.title + ' ' + c.colorGreen}></p>
+              </div>
+              <div className='d-flex align-items-center'>
+                <Dollar />
+                <p className={c.title}>Win Amount:</p>
+                <p className={c.title + ' ' + c.colorGreen}></p>
+              </div>
+            </div>
+          </div>
+          {!betState ? (
+            <div
+              className={c.rollButton + ' gradientHorizontal'}
+              onClick={handleRoll}
+            >
+              <p className={c.rollText}>ROLL!</p>
+            </div>
+          ) : (
+            <div
+              className={c.rollButton + ' gradientHorizontal'}
+              onClick={handleGoBack}
+            >
+              <p className={c.rollText}>BACK!</p>
+            </div>
+          )}
         </div>
       </div>
     </>

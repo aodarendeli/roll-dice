@@ -20,10 +20,10 @@
     }
 }
 @media (min-width: 993px) {
-    .mobileRightSideBar{
-        display: none;
-    }
-    .mobileRightSideBar span{
-        color: white;
-    }
+  .mobileRightSideBar {
+    display: none;
+  }
+  .mobileRightSideBar span {
+    color: white;
+  }
 }

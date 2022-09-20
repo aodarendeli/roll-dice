@@ -12,7 +12,6 @@ import Foooter from './components/Footer/Foooter'
 import RightSidebar from './components/RightSidebar/RightSidebar'
 import MobileRightSidebar from './components/MobileRightSideBar/MobileRightSidebar'
 
-
 const container = document.getElementById('root')
 const root = createRoot(container)
 
@@ -25,7 +24,7 @@ root.render(
         {/* <Dice/> */}
         <RightSidebar />
         <MobileRightSidebar />
-        <Foooter/>
+        <Foooter />
       </PersistGate>
     </Provider>
   </React.StrictMode>

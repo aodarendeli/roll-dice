@@ -15,30 +15,34 @@
 }
 .gameCon {
   display: flex;
-  border: 2px solid red;
   border-radius: 24px;
   flex-direction: column;
   align-items: center;
-  width: 1000px;
+  width: 500px;
   padding: 30px 50px;
 }
 .pendingCont {
-  padding: 4px 12px;
+  padding: 4px 48px;
   border: 2px solid #707070;
   display: flex;
+  width: min-content;
   justify-content: center;
   align-items: center;
   border-radius: 100vh;
+  align-self: center;
 }
 .pendingT {
   font-size: 14px;
   color: #707070;
   font-weight: 700;
 }
-.newDiceCon {
+.newDiceConDesktop {
   display: flex;
   flex-direction: row;
   width: 500px;
+}
+.newDiceConMobile {
+  display: none;
 }
 .newDiceSelection {
   display: flex;
@@ -49,12 +53,15 @@
   height: 220px;
   object-fit: contain;
 }
-.betField {
+.betFieldDesktop {
   display: flex;
   flex-direction: row;
   width: 500px;
-  border: 2px solid yellow;
   justify-content: space-between;
+  align-items: flex-end;
+}
+.betFieldMobile {
+  display: none;
 }
 .amountValue {
   background-color: #111316;
@@ -108,24 +115,37 @@
 }
 .title {
   color: #c9d2d9;
-  font-size: 16px;
+  font-size: 12px;
   margin-left: 5px;
   font-weight: 600;
 }
-.title2 {
-  color: #c9d2d9;
-  font-size: 16px;
-  margin-left: 5px;
-  font-weight: 600;
+.rollButton {
+  width: 70%;
+  padding: 5px 50px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.rollButton:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.rollButton:active {
+  opacity: 0.5;
+  transform: translateY(1px);
+  cursor: pointer;
+}
+.rollText {
+  color: #222222;
+  font-size: 24px;
+  font-weight: 800;
 }
 .colorGreen {
-  color: #58f57a !important;
+  color: #069cc7 !important;
 }
 .textRow {
   display: flex;
   flex-direction: row;
 }
-
 .mobileDice {
   display: none;
   background-color: white;
@@ -148,7 +168,6 @@
   background-color: lime;
   border-radius: 10px;
   opacity: 1;
-  border-color: 1px solid red;
   color: white;
   font-size: 16px;
   padding-left: 15px;
@@ -159,7 +178,6 @@
   background-color: lime;
   border-radius: 10px;
   opacity: 1;
-  border-color: 1px solid red;
   color: white;
   font-size: 12px;
   padding-left: 10px;
@@ -173,6 +191,25 @@
 }
 
 @media (max-width: 992px) {
+  .betFieldDesktop {
+    display: none;
+  }
+
+  .betFieldMobile {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .newDiceConDesktop {
+    display: none;
+  }
+  .newDiceConMobile {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 500px;
+  }
   .gameLeft {
     display: none;
   }
@@ -192,7 +229,11 @@
     border-radius: 24px;
   }
   .gameCon {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    /* padding: 30px 50px; */
   }
   .con {
     padding-top: 100px;
