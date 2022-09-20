@@ -25,7 +25,14 @@ body {
     rgba(34, 102, 212, 1) 100%
   );
 }
-
+.face {
+  background: rgb(52, 185, 185) !important;
+  background: linear-gradient(
+    0deg,
+    rgba(52, 185, 185, 1) 50%,
+    rgba(34, 102, 212, 1) 100%
+  ) !important;
+}
 .gradientVertical {
   background: rgb(52, 185, 185);
   background: linear-gradient(

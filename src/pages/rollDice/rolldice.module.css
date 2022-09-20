@@ -18,26 +18,31 @@
   border-radius: 24px;
   flex-direction: column;
   align-items: center;
-  width: 1000px;
+  width: 500px;
   padding: 30px 50px;
 }
 .pendingCont {
   padding: 4px 48px;
   border: 2px solid #707070;
   display: flex;
+  width: min-content;
   justify-content: center;
   align-items: center;
   border-radius: 100vh;
+  align-self: center;
 }
 .pendingT {
   font-size: 14px;
   color: #707070;
   font-weight: 700;
 }
-.newDiceCon {
+.newDiceConDesktop {
   display: flex;
   flex-direction: row;
   width: 500px;
+}
+.newDiceConMobile {
+  display: none;
 }
 .newDiceSelection {
   display: flex;
@@ -48,12 +53,15 @@
   height: 220px;
   object-fit: contain;
 }
-.betField {
+.betFieldDesktop {
   display: flex;
   flex-direction: row;
   width: 500px;
   justify-content: space-between;
   align-items: flex-end;
+}
+.betFieldMobile {
+  display: none;
 }
 .amountValue {
   background-color: #111316;
@@ -112,7 +120,7 @@
   font-weight: 600;
 }
 .rollButton {
-  width: 400px;
+  width: 70%;
   padding: 5px 50px;
   border-radius: 8px;
   margin-top: 20px;
@@ -138,7 +146,6 @@
   display: flex;
   flex-direction: row;
 }
-
 .mobileDice {
   display: none;
   background-color: white;
@@ -184,6 +191,25 @@
 }
 
 @media (max-width: 992px) {
+  .betFieldDesktop {
+    display: none;
+  }
+
+  .betFieldMobile {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .newDiceConDesktop {
+    display: none;
+  }
+  .newDiceConMobile {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 500px;
+  }
   .gameLeft {
     display: none;
   }
@@ -203,7 +229,11 @@
     border-radius: 24px;
   }
   .gameCon {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    /* padding: 30px 50px; */
   }
   .con {
     padding-top: 100px;
