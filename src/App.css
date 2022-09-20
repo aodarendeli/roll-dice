@@ -1,12 +1,10 @@
 .App #dark {
   text-align: center;
   background-color: #000;
-  
 }
-.App #light{
+.App #light {
   text-align: center;
   background-color: #fff;
-
 }
 
 .App-logo {

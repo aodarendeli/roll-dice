@@ -22,7 +22,7 @@ root.render(
         <DefaultModal />
         {/* <Dice/> */}
         <RightSidebar />
-        <Foooter/>
+        <Foooter />
       </PersistGate>
     </Provider>
   </React.StrictMode>
