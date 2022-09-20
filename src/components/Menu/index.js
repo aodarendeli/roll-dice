@@ -8,7 +8,7 @@ const Menu = () => {
   return (
     <div>
           <Sidebar setNav={(val)=>setNavState(val)} />
-            <div style={{
+            <div className='marque-container' style={{
                 marginLeft:navState? '180px':'40px',
                 transition:'.5s'
                 

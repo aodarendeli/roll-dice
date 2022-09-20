@@ -10,6 +10,8 @@ import DefaultModal from './components/DefaultModal'
 import Foooter from './components/Footer/Foooter'
 // import Dice from './pages/rollDice'
 import RightSidebar from './components/RightSidebar/RightSidebar'
+import MobileRightSidebar from './components/MobileRightSideBar/MobileRightSidebar'
+
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -22,6 +24,7 @@ root.render(
         <DefaultModal />
         {/* <Dice/> */}
         <RightSidebar />
+        <MobileRightSidebar />
         <Foooter/>
       </PersistGate>
     </Provider>

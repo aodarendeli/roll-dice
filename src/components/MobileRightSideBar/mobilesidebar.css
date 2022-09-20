@@ -1,0 +1,21 @@
+@media (max-width: 992px) {
+    .mobileRightSideBar{
+        display: block;
+        background: linear-gradient(0deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%);
+        border-radius: 10px;
+    }
+    .mobileRightSideBar p{
+        margin-bottom: 0rem !important;
+    }
+    .mobileRightSideBar span{
+        color: white;
+    }
+}
+@media (min-width: 993px) {
+    .mobileRightSideBar{
+        display: none;
+    }
+    .mobileRightSideBar span{
+        color: white;
+    }
+}

@@ -7,7 +7,7 @@ function Foooter() {
   return (
     <div className='container pt-3 pb-3'>
       <div className='row'>
-        <div className='col-8'>
+        <div className='col-lg-8 col-md-12 col-sm-12'>
             <div className='footer'>
             <Logo />
             <p>Casıno</p>

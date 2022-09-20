@@ -2,6 +2,9 @@ import React,{useState} from 'react'
 import {FaUser} from 'react-icons/fa'
 import './sidebar.css'
 import Logo from '../../svg/index'
+import Wallet from '../../svg/wallet'
+import Toggle from '../../svg/toggle'
+import BlockChain from '../../svg/blockchain'
 import Select from '../../svg/select'
 
 
@@ -24,19 +27,27 @@ function Sidebar(props) {
   return (
     <>
         <header>
-            <div onClick={handleClick} className="toggle">
-                <FaUser className='mx-1' />
+            <div className='mobile-sidebar'>
+                SX
             </div>
-            <h3>Dashboard</h3>
-            <a href="#">
-                <FaUser className='mx-1' />
-            </a>
+            <div className='d-flex'>
+                <div className='mobile-connect-wallet d-flex align-items-center mx-2'>
+                    <Wallet className="mx-1" />
+                    <span className="mx-1">Connect wallet</span>
+                </div>
+                <div className='mx-2'>
+                    <BlockChain />
+                </div>
+                <div onClick={handleClick} className="toggle mx-2">
+                    <Toggle className='mx-1' />
+                </div>
+            </div>
         </header>
         <div id='sidebar__container'>
            <nav>
             <ul>
                 <div className='text-center'>
-                    <Logo className="toggle mx-2" />
+                    <Logo className="toggle" />
                     <Select  onClick={handleClick}/>
                 </div>
                 <li>
