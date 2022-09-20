@@ -6,7 +6,7 @@ import Logo from '../../svg/index'
 
 export default function RightSidebar() {
   return (
-    <div className='rightSideBar'>
+    <div className='rightSideBar gradientVertical'>
       <div className='container mt-3'>
         <div className='row'>
           <div className='col'>

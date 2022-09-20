@@ -1,13 +1,12 @@
 .rightSideBar{
     right: 0;
-    height: 100%;
+    top:0;
+    margin-top: 68px;
     width: 300px;
-    position: fixed;
-    background: transparent linear-gradient(199deg, #222222 0%, var(--unnamed-color-069cc700) 100%) 0% 0% no-repeat padding-box;
-    background: transparent linear-gradient(199deg, #222222 0%, #069CC700 100%) 0% 0% no-repeat padding-box;
+    position: absolute;
     border: 1px solid #222222;
-    border-radius: 20px 20px 0px 0px;
-    opacity: 1;
+    border-radius: 20px 20px 20px 20px;
+    opacity: .8;
 }
 
 .rightSideBar span{

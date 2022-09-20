@@ -1,7 +1,6 @@
 import React from 'react'
 import Menu from '../../components/Menu'
 import RollDice from '../../pages/rollDice/index'
-import RightSidebar from '../../components/RightSidebar/RightSidebar'
 
 function index() {
   return (
@@ -12,9 +11,8 @@ function index() {
             <div className='col-8'>
              <RollDice />
             </div>
-            <div className='col-4'>
-              <RightSidebar />
-            </div>
+            {/* <div className='col-4'>
+            </div> */}
           </div>
         </div>
     </div>

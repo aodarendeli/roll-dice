@@ -9,6 +9,7 @@ import {PersistGate} from 'redux-persist/integration/react'
 import DefaultModal from './components/DefaultModal'
 import Foooter from './components/Footer/Foooter'
 // import Dice from './pages/rollDice'
+import RightSidebar from './components/RightSidebar/RightSidebar'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -20,6 +21,7 @@ root.render(
         <App />
         <DefaultModal />
         {/* <Dice/> */}
+        <RightSidebar />
         <Foooter/>
       </PersistGate>
     </Provider>
