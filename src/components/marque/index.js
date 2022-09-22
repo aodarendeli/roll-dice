@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Marquee from 'react-fast-marquee'
 import Volume from '../../svg/volume'
 import Megaphone from '../../svg/Megaphone'
@@ -7,16 +7,34 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Logo from '../../svg/index'
 import {FaUser} from 'react-icons/fa'
-import {BsVolumeUpFill} from 'react-icons/bs'
-
-
+import {BsVolumeUpFill, BsFillVolumeMuteFill} from 'react-icons/bs'
 import './marque.css'
 
-function index() {
+export default () => {
+  const [soundState, setSoundState] = useState(
+    localStorage.getItem('sound') || 'on'
+  )
+  useEffect(() => {
+    console.log('ilk hal storage:', localStorage.getItem('sound'))
+    console.log('ilk hal statw:', soundState)
+    !localStorage.getItem('sound') && localStorage.setItem('sound', 'on')
+  }, [])
+
+  const toggleSound = () => {
+    let sound = localStorage.getItem('sound') === 'on' ? 'off' : 'on'
+    sound === 'on' ? setSoundState('on') : setSoundState('off')
+    localStorage.setItem('sound', sound)
+    console.log('Sound:', sound)
+  }
+
   return (
     <div className='d-flex'>
       <div className='d-flex align-items-center'>
-        <BsVolumeUpFill  className='mx-4 volume' />
+        {soundState === 'on' ? (
+          <BsVolumeUpFill className='mx-4 volume' onClick={toggleSound} />
+        ) : (
+          <BsFillVolumeMuteFill className='mx-4 volume' onClick={toggleSound} />
+        )}
       </div>
       <Marquee className='marque__background' pauseOnHover='true' speed={100}>
         <div
@@ -73,5 +91,3 @@ function index() {
     </div>
   )
 }
-
-export default index

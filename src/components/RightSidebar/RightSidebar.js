@@ -182,7 +182,6 @@ export default function RightSidebar() {
                 <Logo />
               </div>
             </div>
-            
           </div>
         </div>
       </div>

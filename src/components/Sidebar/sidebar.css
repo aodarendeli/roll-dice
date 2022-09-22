@@ -87,7 +87,7 @@ nav ul a.toggle {
 .toggle {
   cursor: pointer;
 }
-.reverse{
+.reverse {
   transform: rotate(-180deg);
   transition: ease 1s;
   color: #069cc7;
@@ -95,7 +95,7 @@ nav ul a.toggle {
   height: 30px;
   margin-top: 10px;
 }
-.regular{
+.regular {
   transition: ease 1s;
   color: #069cc7;
   width: 30px;
@@ -115,7 +115,7 @@ header .mobile-sidebar {
   align-items: center;
   flex-direction: row;
 }
-.soon{
+.soon {
   border-radius: 7px;
   font-weight: 600;
   color: black;
@@ -168,4 +168,3 @@ header .mobile-sidebar {
     display: none;
   }
 }
-

@@ -15,8 +15,6 @@ import {TiContacts} from 'react-icons/ti'
 import {MdDarkMode} from 'react-icons/md'
 import {BsFillPlayCircleFill} from 'react-icons/bs'
 
-
-
 import './sidebar.css'
 import Logo from '../../svg/index'
 import Wallet from '../../svg/wallet'
@@ -62,7 +60,10 @@ function Sidebar(props) {
           <ul>
             <div className='text-center'>
               <Logo className='toggle mt-1' />
-              <BsFillPlayCircleFill className={navActive ? 'mx-3 reverse' : 'regular'} onClick={handleClick} />
+              <BsFillPlayCircleFill
+                className={navActive ? 'mx-3 reverse' : 'regular'}
+                onClick={handleClick}
+              />
             </div>
             <Link to='/'>
               <span className='nav-tab' style={{marginTop: '25px'}}>
@@ -110,8 +111,8 @@ function Sidebar(props) {
                   <span className='icon'>
                     <IoRocketOutline className='mx-1' />
                   </span>
-                    <span className='title'>Crash</span>
-                    <span className='soon'>Soon</span>
+                  <span className='title'>Crash</span>
+                  <span className='soon'>Soon</span>
                 </span>
               </Link>
               <Link>
@@ -121,7 +122,6 @@ function Sidebar(props) {
                   </span>
                   <span className='title'>Plinko</span>
                   <span className='soon'>Soon</span>
-
                 </span>
               </Link>
               <Link>
@@ -131,7 +131,6 @@ function Sidebar(props) {
                   </span>
                   <span className='title'>Slot</span>
                   <span className='soon'>Soon</span>
-
                 </span>
               </Link>
               <Link>
@@ -141,7 +140,6 @@ function Sidebar(props) {
                   </span>
                   <span className='title'>Roulette</span>
                   {/* <span className='soon'>Soon</span> */}
-
                 </span>
               </Link>
               <Link>
@@ -151,7 +149,6 @@ function Sidebar(props) {
                   </span>
                   <span className='title'>Bridge</span>
                   <span className='soon'>Soon</span>
-
                 </span>
               </Link>
               <Link>
@@ -161,7 +158,6 @@ function Sidebar(props) {
                   </span>
                   <span className='title'>Swap</span>
                   <span className='soon'>Soon</span>
-
                 </span>
               </Link>
             </div>

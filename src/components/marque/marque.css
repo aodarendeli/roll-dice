@@ -1,8 +1,8 @@
 .marquee div {
   cursor: pointer;
 }
-.volume{
-  color: #0D6B91;
+.volume {
+  color: #0d6b91;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -44,19 +44,19 @@
   opacity: 1;
   cursor: pointer;
 }
-.profileMeta span{
+.profileMeta span {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bolder;
   color: #030303;
 }
-.profileMetaBlue span{
+.profileMetaBlue span {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bolder;
   color: #030303;
 }
-.profileMetaWhite span{
+.profileMetaWhite span {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bolder;
