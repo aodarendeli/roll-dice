@@ -5,7 +5,7 @@ import Logo from '../../svg/index'
 
 export default function RightSidebar() {
   return (
-    <div className='rightSideBar '>
+    <div className='rightSideBar'>
       <div className='container mt-3'>
         <div className='row'>
           <div className='col'>
@@ -162,6 +162,27 @@ export default function RightSidebar() {
                 <Logo />
               </div>
             </div>
+            <div className='d-flex justify-content-between mt-2'>
+              <div className='d-flex align-items-center rightSideBarInformation'>
+                <p>Won</p>
+                <span>loremıpsum</span>
+              </div>
+              <div className='d-flex align-items-center rightSideBarInformation'>
+                <p>4,3</p>
+                <Logo />
+              </div>
+            </div>
+            <div className='d-flex justify-content-between mt-2'>
+              <div className='d-flex align-items-center rightSideBarInformation'>
+                <p>Won</p>
+                <span>loremıpsum</span>
+              </div>
+              <div className='d-flex align-items-center rightSideBarInformation'>
+                <p>4,3</p>
+                <Logo />
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

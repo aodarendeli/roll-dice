@@ -7,14 +7,16 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Logo from '../../svg/index'
 import {FaUser} from 'react-icons/fa'
+import {BsVolumeUpFill} from 'react-icons/bs'
+
 
 import './marque.css'
 
 function index() {
   return (
-    <div className='d-flex align-items-center'>
-      <div className=''>
-        <FaUser className='mx-4' />
+    <div className='d-flex'>
+      <div className='d-flex align-items-center'>
+        <BsVolumeUpFill  className='mx-4 volume' />
       </div>
       <Marquee className='marque__background' pauseOnHover='true' speed={100}>
         <div

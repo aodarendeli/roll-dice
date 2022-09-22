@@ -1,15 +1,22 @@
 .marquee div {
   cursor: pointer;
 }
+.volume{
+  color: #0D6B91;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
 .marque__background {
-  height: 64px;
+  height: 44px;
   padding-bottom: 25px;
-  /* background: rgb(52, 185, 185);
+  margin-top: 10px;
+  background: rgb(52, 185, 185);
   background: linear-gradient(
     90deg,
     rgba(52, 185, 185, 1) 50%,
     rgba(34, 102, 212, 1) 100%
-  ); */
+  );
 }
 
 .overlay::before,
@@ -20,7 +27,7 @@
 .profileMetaWhite {
   border: 1px solid transparent;
   border-radius: 15px;
-  height: 40px;
+  height: 30px;
   background-color: #f0f0f0;
   /* background: rgb(52,185,185);
   background: linear-gradient(90deg, rgba(52,185,185,1) 50%, rgba(34,102,212,1) 100%); */
@@ -31,16 +38,34 @@
 .profileMeta {
   border: 1px solid transparent;
   border-radius: 15px;
-  height: 40px;
+  height: 30px;
   background: #62d8ac;
   padding: 10px;
   opacity: 1;
   cursor: pointer;
 }
+.profileMeta span{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #030303;
+}
+.profileMetaBlue span{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #030303;
+}
+.profileMetaWhite span{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #030303;
+}
 .profileMetaBlue {
   border: 1px solid transparent;
   border-radius: 15px;
-  height: 40px;
+  height: 30px;
   background-color: #2366d3;
   padding: 10px;
   opacity: 1;
@@ -63,6 +88,9 @@
   width: 100% !important;
   transform: translate(0px, 62px) !important;
   border-color: rgb(52, 185, 185) !important;
+  padding: 5px 10px !important;
+  background: #030303 !important;
+  padding-bottom: 0px !important;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
@@ -71,6 +99,8 @@
 }
 .dropdown-item {
   background-color: #030303 !important;
+  border-bottom: 2px solid !important;
+  padding: 15px 20px !important;
 }
 .dropdown-menu {
   --bs-dropdown-padding-y: 0rem !important;

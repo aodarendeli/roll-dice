@@ -87,6 +87,20 @@ nav ul a.toggle {
 .toggle {
   cursor: pointer;
 }
+.reverse{
+  transform: rotate(-180deg);
+  transition: ease 1s;
+  color: #069cc7;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+.regular{
+  transition: ease 1s;
+  color: #069cc7;
+  width: 30px;
+  height: 30px;
+}
 
 header {
   display: none;
@@ -100,6 +114,20 @@ header .mobile-sidebar {
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+.soon{
+  border-radius: 7px;
+  font-weight: 600;
+  color: black;
+  padding: 3px;
+  margin-left: 7px;
+  font-size: 10px;
+  background: rgb(52, 185, 185);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 185, 185, 1) 50%,
+    rgba(34, 102, 212, 1) 100%
+  );
 }
 @media (max-width: 992px) {
   header {
@@ -140,3 +168,4 @@ header .mobile-sidebar {
     display: none;
   }
 }
+

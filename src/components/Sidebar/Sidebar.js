@@ -13,6 +13,9 @@ import {HiOutlineUser} from 'react-icons/hi'
 import {IoStatsChartOutline} from 'react-icons/io5'
 import {TiContacts} from 'react-icons/ti'
 import {MdDarkMode} from 'react-icons/md'
+import {BsFillPlayCircleFill} from 'react-icons/bs'
+
+
 
 import './sidebar.css'
 import Logo from '../../svg/index'
@@ -58,8 +61,8 @@ function Sidebar(props) {
         <nav>
           <ul>
             <div className='text-center'>
-              <Logo className='toggle' />
-              <Select onClick={handleClick} />
+              <Logo className='toggle mt-1' />
+              <BsFillPlayCircleFill className={navActive ? 'mx-3 reverse' : 'regular'} onClick={handleClick} />
             </div>
             <Link to='/'>
               <span className='nav-tab' style={{marginTop: '25px'}}>
@@ -107,7 +110,8 @@ function Sidebar(props) {
                   <span className='icon'>
                     <IoRocketOutline className='mx-1' />
                   </span>
-                  <span className='title'>Crash</span>
+                    <span className='title'>Crash</span>
+                    <span className='soon'>Soon</span>
                 </span>
               </Link>
               <Link>
@@ -116,6 +120,8 @@ function Sidebar(props) {
                     <FiTriangle className='mx-1' />
                   </span>
                   <span className='title'>Plinko</span>
+                  <span className='soon'>Soon</span>
+
                 </span>
               </Link>
               <Link>
@@ -124,6 +130,8 @@ function Sidebar(props) {
                     <GiSloth className='mx-1' />
                   </span>
                   <span className='title'>Slot</span>
+                  <span className='soon'>Soon</span>
+
                 </span>
               </Link>
               <Link>
@@ -132,6 +140,8 @@ function Sidebar(props) {
                     <SiNintendogamecube className='mx-1' />
                   </span>
                   <span className='title'>Roulette</span>
+                  {/* <span className='soon'>Soon</span> */}
+
                 </span>
               </Link>
               <Link>
@@ -140,6 +150,8 @@ function Sidebar(props) {
                     <GiTowerBridge className='mx-1' />
                   </span>
                   <span className='title'>Bridge</span>
+                  <span className='soon'>Soon</span>
+
                 </span>
               </Link>
               <Link>
@@ -148,6 +160,8 @@ function Sidebar(props) {
                     <IoIosSwap className='mx-1' />
                   </span>
                   <span className='title'>Swap</span>
+                  <span className='soon'>Soon</span>
+
                 </span>
               </Link>
             </div>
