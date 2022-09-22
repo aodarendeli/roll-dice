@@ -1,6 +1,11 @@
 .footer {
   display: flex;
   align-items: center;
+
+}
+.footer-container{
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .footer p {
   color: white;

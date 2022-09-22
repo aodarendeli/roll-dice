@@ -20,13 +20,12 @@
   align-items: center;
   width: 500px;
   padding: 30px 50px;
-  border: 1px solid yellow;
 }
 .pendingCont {
   padding: 4px 48px;
   border: 2px solid #707070;
   display: flex;
-  width: min-content;
+  /* width: min-content; */
   justify-content: center;
   align-items: center;
   border-radius: 100vh;
@@ -263,7 +262,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px;
-    width: 80%;
+    width: 92%;
     border-radius: 16px;
   }
   .circleP {
@@ -351,9 +350,10 @@
   .betFieldMobile {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+    margin: 0 auto;
     justify-content: space-between;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     margin-top: 20px;
   }
   .betFieldDesktop {
