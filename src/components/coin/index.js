@@ -38,10 +38,10 @@ export default ({state, theChoice, ind, flipping}) => {
           <p className='coinT'>H</p>
         </div>
       </div>
-      <div className='d-flex mt-2 justify-content-between amountValue ms-2'>
+      <div className='htcon'>
         <div
           className={
-            selected === 'H' ? 'amountReduce mx-2' : 'amountReduceUnselect mx-2'
+            selected === 'H' ? 'selectedBg  gradientVertical' : 'unselectedBg'
           }
         >
           <p
@@ -53,12 +53,12 @@ export default ({state, theChoice, ind, flipping}) => {
               theChoice({coinInd: ind, res: 'heads'})
             }}
           >
-            H
+            HEADS
           </p>
         </div>
         <div
           className={
-            selected === 'T' ? 'amountReduce mx-2' : 'amountReduceUnselect mx-2'
+            selected === 'T' ? 'selectedBg  gradientVertical' : 'unselectedBg'
           }
         >
           <p
@@ -70,7 +70,7 @@ export default ({state, theChoice, ind, flipping}) => {
               theChoice({coinInd: ind, res: 'tails'})
             }}
           >
-            T
+            TAILS
           </p>
         </div>
       </div>

@@ -20,6 +20,7 @@
   align-items: center;
   width: 500px;
   padding: 30px 50px;
+  border: 1px solid yellow;
 }
 .pendingCont {
   padding: 4px 48px;
@@ -42,6 +43,8 @@
   width: 500px;
   justify-content: space-between;
   align-items: flex-end;
+  align-items: center;
+  margin-top: 50px;
 }
 .betFieldMobile {
   display: none;
@@ -54,6 +57,7 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid #303030;
+  align-self: center;
 }
 .amountButton {
   background-color: #151a1e;
@@ -183,6 +187,7 @@
   flex-direction: row;
   align-items: center;
 }
+
 .circle {
   width: 25px;
   height: 25px;
@@ -239,7 +244,52 @@
 .colorGreen {
   color: #069cc7 !important;
 }
+.conRow2 {
+  display: flex;
+  flex-direction: row;
+}
 @media (max-width: 992px) {
+  .gameCon {
+    display: flex;
+    border-radius: 24px;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 30px 50px;
+  }
+  .coinNumBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    width: 80%;
+    border-radius: 16px;
+  }
+  .circleP {
+    color: rgb(52, 185, 185);
+    margin: 0 !important;
+    font-size: 10px;
+  }
+  .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #0e0e0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circleDisabled {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #0e0e0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+  }
   .rowsConDesktop {
     display: none;
   }
@@ -269,9 +319,7 @@
   .gameCon {
     display: block;
   }
-  /* .con {
-    padding-top: 100px;
-  } */
+
   .btnDice {
     display: none;
   }
@@ -300,12 +348,15 @@
     align-self: center;
     width: min-content;
   }
-}
-@media (min-width: 993px) {
-  .mobileDice {
-    display: none;
+  .betFieldMobile {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
   }
-  .mobileBtnDice {
+  .betFieldDesktop {
     display: none;
   }
 }
