@@ -1,11 +1,10 @@
 import React from 'react'
-import Menu from '../../components/Menu'
-import RollDice from '../../pages/rollDice/index'
+import RollDice from '../../pages/rollDice'
+import CoinFlip from '../../pages/coinFlip'
 
 function index() {
   return (
     <div className=''>
-      <Menu />
       <div className='text-center'>
         <div className='container d-flex'>
           <div className='col-lg-8 col-md-12 col-sm-12'>

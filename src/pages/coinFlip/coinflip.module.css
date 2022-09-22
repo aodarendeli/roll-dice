@@ -246,9 +246,9 @@
   .gameCon {
     display: block;
   }
-  .con {
+  /* .con {
     padding-top: 100px;
-  }
+  } */
   .btnDice {
     display: none;
   }

@@ -6,6 +6,7 @@ import Wallet from '../../svg/wallet'
 import Toggle from '../../svg/toggle'
 import BlockChain from '../../svg/blockchain'
 import Select from '../../svg/select'
+import {Link} from 'react-router-dom'
 
 function Sidebar(props) {
   const [gamesVisibility, setGamesVisibility] = useState(false)
@@ -51,7 +52,9 @@ function Sidebar(props) {
                 <span className='icon'>
                   <FaUser className='mx-1' />
                 </span>
+                <Link to="/">
                 <span className='title'>Home</span>
+                </Link>
               </a>
             </li>
             <li>
@@ -74,7 +77,9 @@ function Sidebar(props) {
                   <span className='icon'>
                     <FaUser className='mx-1' />
                   </span>
+                  <Link to ="./games/coin">
                   <span className='title'>Coinflip</span>
+                  </Link>
                 </a>
               </li>
               <li>
@@ -82,7 +87,9 @@ function Sidebar(props) {
                   <span className='icon'>
                     <FaUser className='mx-1' />
                   </span>
+                  <Link to ="./games/dice">
                   <span className='title'>Dice</span>
+                  </Link>
                 </a>
               </li>
               <li>

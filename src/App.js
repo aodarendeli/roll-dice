@@ -5,6 +5,8 @@ import {useSelector} from 'react-redux'
 import RollDice from './pages/rollDice'
 import CoinFlip from './pages/coinFlip'
 import Dashboard from './pages/Dashboard'
+import Menu from './components/Menu'
+
 
 export const ThemeContext = createContext(null)
 
@@ -32,6 +34,7 @@ function App() {
     <div className='App' id={theme}>
       <Router>
         <div className={theme}>
+        <Menu />
           <Routes>
             <Route path='/' element={<Dashboard />} />
             <Route path='/games/dice' element={<RollDice />} />
