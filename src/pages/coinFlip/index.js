@@ -172,7 +172,10 @@ export default () => {
   }
   return (
     <>
-      <div className={c.con}>
+    <div className='container'>
+      <div className='row'>
+        <div className='col-8'>
+        <div className={c.con}>
         <div className={c.gameCon}>
           <div className={c.pendingCont}>
             <p className={c.pendingT}>Pending</p>
@@ -274,7 +277,7 @@ export default () => {
           </div>
           <div className={c.betFieldMobile}>
             <div>
-              <p
+              <p className='mt-3'
                 style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}
               >
                 Bet
@@ -298,7 +301,7 @@ export default () => {
               </div>
             </div>
             <div>
-              <p
+              <p className='mt-3'
                 style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}
               >
                 Coins
@@ -350,6 +353,10 @@ export default () => {
           )}
         </div>
       </div>
+        </div>
+      </div>
+    </div>
+     
       {/* <div className={c.con + ' mt-5'}>
         <div className={c.gameCon}>
           <div className={c.mobileDice}>
