@@ -1,9 +1,8 @@
 .footer {
   display: flex;
   align-items: center;
-
 }
-.footer-container{
+.footer-container {
   padding-left: 50px;
   padding-right: 50px;
 }
