@@ -7,7 +7,11 @@
   border: 1px solid #222222;
   border-radius: 20px 20px 20px 20px;
   opacity: 0.8;
-  background: linear-gradient( 0deg, rgba(52, 185, 185, 0.2) 50%, rgba(34, 102, 212, 0.2) 100% );
+  background: linear-gradient(
+    0deg,
+    rgba(52, 185, 185, 0.2) 50%,
+    rgba(34, 102, 212, 0.2) 100%
+  );
 }
 .rightSideBar span {
   color: rgb(52, 185, 185);

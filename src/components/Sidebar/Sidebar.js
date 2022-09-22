@@ -52,8 +52,8 @@ function Sidebar(props) {
                 <span className='icon'>
                   <FaUser className='mx-1' />
                 </span>
-                <Link to="/">
-                <span className='title'>Home</span>
+                <Link to='/'>
+                  <span className='title'>Home</span>
                 </Link>
               </a>
             </li>
@@ -77,8 +77,8 @@ function Sidebar(props) {
                   <span className='icon'>
                     <FaUser className='mx-1' />
                   </span>
-                  <Link to ="./games/coin">
-                  <span className='title'>Coinflip</span>
+                  <Link to='./games/coin'>
+                    <span className='title'>Coinflip</span>
                   </Link>
                 </a>
               </li>
@@ -87,8 +87,8 @@ function Sidebar(props) {
                   <span className='icon'>
                     <FaUser className='mx-1' />
                   </span>
-                  <Link to ="./games/dice">
-                  <span className='title'>Dice</span>
+                  <Link to='./games/dice'>
+                    <span className='title'>Dice</span>
                   </Link>
                 </a>
               </li>

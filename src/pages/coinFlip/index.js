@@ -23,7 +23,7 @@ export default () => {
   const [pendingValue, setPendingValue] = useState(0)
   const [multiplierValue, setMultiplierValue] = useState(0)
   const [betState, setBetState] = useState(false)
-  const [selectedNumber, setSelectedNumber] = useState('1')
+  const [selectedNumber, setSelectedNumber] = useState(1)
   const [coinNum, setCoinNum] = useState([{res: '', refresh: 'initial'}])
   const [userChoices, setUserChoices] = useState([
     {coinInd: 0, res: 'tails'},
@@ -42,7 +42,11 @@ export default () => {
   const [playCoinStop] = useSound(coinstop)
   const [playPingPong] = useSound(pingpong)
 
-  const handleNumberOfCoins = (num) => {
+  const handleNumberOfCoins = (mode) => {
+    if (mode === 'decrease') {
+    } else {
+    }
+    let num = mode == 'decrease' ? selectedNumber - 1 : selectedNumber + 1
     setSelectedNumber(num)
     localStorage.getItem('sound') === 'on' && playPingPong()
     let temp = []
@@ -169,6 +173,105 @@ export default () => {
   return (
     <>
       <div className={c.con + ' mt-5'}>
+        <div className={c.gameCon}>
+          <div className={c.pendingCont}>
+            <p className={c.pendingT}>Pending</p>
+          </div>
+          <div className={c.coinConDesktop}>
+            {coinNum.map((item, index) => {
+              return (
+                <Coin
+                  key={index}
+                  state={coinNum[index]}
+                  ind={index}
+                  flipping={flipping}
+                  theChoice={(val) => {
+                    handleChoices(val)
+                  }}
+                />
+              )
+            })}
+          </div>
+
+          <div className={c.betFieldDesktop}>
+            <div>
+              <p
+                style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}
+              >
+                Bet
+              </p>
+              <div>
+                <div className={c.amountValue}>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginRight: '30px'}}
+                  >
+                    Min
+                  </div>
+                  <div className={c.amounTotal}>1000</div>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginLeft: '30px'}}
+                  >
+                    Max
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p
+                style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}
+              >
+                Coins
+              </p>
+              <div className={c.coinNumBox + ' gradientVertical'}>
+                {selectedNumber < 2 ? (
+                  <div className={c.circleDisabled + ' noselect'}>
+                    <p className={c.circleP}>-</p>
+                  </div>
+                ) : (
+                  <div
+                    className={c.circle + ' noselect'}
+                    onClick={() => handleNumberOfCoins('decrease')}
+                  >
+                    <p className={c.circleP}>-</p>
+                  </div>
+                )}
+                <p>{selectedNumber}</p>
+                {selectedNumber > 3 ? (
+                  <div className={c.circleDisabled + ' noselect'}>
+                    <p className={c.circleP}>+</p>
+                  </div>
+                ) : (
+                  <div
+                    className={c.circle + ' noselect'}
+                    onClick={() => handleNumberOfCoins('increase')}
+                  >
+                    <p className={c.circleP}>+</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {!betState ? (
+            <div
+              className={c.rollButton + ' gradientVertical'}
+              // onClick={handleRoll}
+            >
+              <p className={c.rollText}>FLIP!</p>
+            </div>
+          ) : (
+            <div
+              className={c.rollButton + ' gradientVertical'}
+              // onClick={handleGoBack}
+            >
+              <p className={c.rollText}>BACK!</p>
+            </div>
+          )}
+        </div>
+      </div>
+      {/* <div className={c.con + ' mt-5'}>
         <div className={c.gameCon}>
           <div className={c.mobileDice}>
             <div className={c.fix + ' ' + c.mobilecoin + ' d-flex'}>
@@ -328,7 +431,7 @@ export default () => {
               </Dropdown.Menu>
             </Dropdown>
             <div className={c.field + ' mt-3'}>
-              {/* <Fas /> */}
+              
               <p className={c.title}>Coins</p>
             </div>
             <div
@@ -499,7 +602,7 @@ export default () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
