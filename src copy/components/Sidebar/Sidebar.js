@@ -1,19 +1,5 @@
 import React, {useState} from 'react'
-import {AiOutlineHome} from 'react-icons/ai'
-import {CgGames} from 'react-icons/cg'
-import {BsCoin} from 'react-icons/bs'
-import {BsDice3} from 'react-icons/bs'
-import {IoRocketOutline} from 'react-icons/io5'
-import {FiTriangle} from 'react-icons/fi'
-import {GiSloth} from 'react-icons/gi'
-import {SiNintendogamecube} from 'react-icons/si'
-import {GiTowerBridge} from 'react-icons/gi'
-import {IoIosSwap} from 'react-icons/io'
-import {HiOutlineUser} from 'react-icons/hi'
-import {IoStatsChartOutline} from 'react-icons/io5'
-import {TiContacts} from 'react-icons/ti'
-import {MdDarkMode} from 'react-icons/md'
-
+import {FaUser} from 'react-icons/fa'
 import './sidebar.css'
 import Logo from '../../svg/index'
 import Wallet from '../../svg/wallet'
@@ -61,24 +47,24 @@ function Sidebar(props) {
               <Logo className='toggle' />
               <Select onClick={handleClick} />
             </div>
-            <Link to='/'>
-              <span className='nav-tab' style={{marginTop: '25px'}}>
+            <li>
+              <a className='nav-tab' style={{marginTop: '25px'}}>
                 <span className='icon'>
-                  <AiOutlineHome className='mx-1' />
+                  <FaUser className='mx-1' />
                 </span>
                 <Link to='/'>
                   <span className='title'>Home</span>
                 </Link>
-              </span>
-            </Link>
-            <Link>
-              <span className='nav-tab' onClick={toggleGamesVisibility}>
+              </a>
+            </li>
+            <li>
+              <a className='nav-tab' onClick={toggleGamesVisibility}>
                 <span className='icon'>
-                  <CgGames className='mx-1' />
+                  <FaUser className='mx-1' />
                 </span>
                 <span className='title'>Games</span>
-              </span>
-            </Link>
+              </a>
+            </li>
             <div
               style={{
                 display: gamesVisibility ? 'block' : 'none',
@@ -86,103 +72,107 @@ function Sidebar(props) {
                 transition: '.5s',
               }}
             >
-              <Link to='./games/coin'>
-                <span className='nav-tab'>
+              <li>
+                <a className='nav-tab'>
                   <span className='icon'>
-                    <BsCoin className='mx-1' />
+                    <FaUser className='mx-1' />
                   </span>
-                  <span className='title'>Coinflip</span>
-                </span>
-              </Link>
-              <Link to='./games/dice'>
-                <span className='nav-tab'>
+                  <Link to='./games/coin'>
+                    <span className='title'>Coinflip</span>
+                  </Link>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
                   <span className='icon'>
-                    <BsDice3 className='mx-1' />
+                    <FaUser className='mx-1' />
                   </span>
-                  <span className='title'>Dice</span>
-                </span>
-              </Link>
-              <Link>
-                <span className='nav-tab'>
+                  <Link to='./games/dice'>
+                    <span className='title'>Dice</span>
+                  </Link>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
                   <span className='icon'>
-                    <IoRocketOutline className='mx-1' />
+                    <FaUser className='mx-1' />
                   </span>
                   <span className='title'>Crash</span>
-                </span>
-              </Link>
-              <Link>
-                <span className='nav-tab'>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
                   <span className='icon'>
-                    <FiTriangle className='mx-1' />
+                    <FaUser className='mx-1' />
                   </span>
                   <span className='title'>Plinko</span>
-                </span>
-              </Link>
-              <Link>
-                <span className='nav-tab'>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
                   <span className='icon'>
-                    <GiSloth className='mx-1' />
+                    <FaUser className='mx-1' />
                   </span>
                   <span className='title'>Slot</span>
-                </span>
-              </Link>
-              <Link>
-                <span className='nav-tab'>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
                   <span className='icon'>
-                    <SiNintendogamecube className='mx-1' />
+                    <FaUser className='mx-1' />
                   </span>
                   <span className='title'>Roulette</span>
-                </span>
-              </Link>
-              <Link>
-                <span className='nav-tab'>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
                   <span className='icon'>
-                    <GiTowerBridge className='mx-1' />
+                    <FaUser className='mx-1' />
                   </span>
                   <span className='title'>Bridge</span>
-                </span>
-              </Link>
-              <Link>
-                <span className='nav-tab'>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
                   <span className='icon'>
-                    <IoIosSwap className='mx-1' />
+                    <FaUser className='mx-1' />
                   </span>
                   <span className='title'>Swap</span>
-                </span>
-              </Link>
+                </a>
+              </li>
             </div>
-            <Link>
-              <span className='nav-tab'>
+            <li>
+              <a className='nav-tab'>
                 <span className='icon'>
-                  <HiOutlineUser className='mx-1' />
+                  <FaUser className='mx-1' />
                 </span>
                 <span className='title'>Profile</span>
-              </span>
-            </Link>
-            <Link>
-              <span className='nav-tab'>
+              </a>
+            </li>
+            <li>
+              <a className='nav-tab'>
                 <span className='icon'>
-                  <IoStatsChartOutline className='mx-1' />
+                  <FaUser className='mx-1' />
                 </span>
                 <span className='title'>Stats</span>
-              </span>
-            </Link>
-            <Link>
-              <span className='nav-tab'>
+              </a>
+            </li>
+            <li>
+              <a className='nav-tab'>
                 <span className='icon'>
-                  <TiContacts className='mx-1' />
+                  <FaUser className='mx-1' />
                 </span>
                 <span className='title'>Contact</span>
-              </span>
-            </Link>
-            <Link>
-              <span className='nav-tab'>
+              </a>
+            </li>
+            <li>
+              <a className='nav-tab'>
                 <span className='icon'>
-                  <MdDarkMode className='mx-1' />
+                  <FaUser className='mx-1' />
                 </span>
                 <span className='title'>Dark</span>
-              </span>
-            </Link>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

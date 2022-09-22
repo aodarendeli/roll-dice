@@ -30,19 +30,19 @@ nav ul {
   color: white;
 }
 
-nav ul a {
+nav ul li {
   list-style: none;
   width: 100%;
   color: white;
   position: relative;
 }
 
-nav ul a:hover a::before {
+nav ul li:hover a::before {
   background: #069cc7 0% 0% no-repeat padding-box;
   width: 100%;
 }
 
-nav ul a {
+nav ul li a {
   position: relative;
   display: block;
   width: 100%;
@@ -53,7 +53,7 @@ nav ul a {
   transition: 0.2s;
 }
 
-nav ul a::before {
+nav ul li a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -63,7 +63,7 @@ nav ul a::before {
   transition: 0.2s;
 }
 
-nav ul a .icon {
+nav ul li a .icon {
   position: relative;
   display: block;
   min-width: 60px;
@@ -71,16 +71,16 @@ nav ul a .icon {
   text-align: center;
 }
 
-nav ul a .title {
+nav ul li a .title {
   position: relative;
   font-size: 0.85em;
 }
 
-nav ul a .icon * {
+nav ul li a .icon * {
   font-size: 1.1em;
 }
 
-nav ul a.toggle {
+nav ul li a.toggle {
   border-bottom: 3px solid var(--bg-primary);
 }
 
@@ -95,7 +95,6 @@ header .mobile-sidebar {
   display: none;
 }
 .nav-tab {
-  margin-top: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;

@@ -1,0 +1,275 @@
+.con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+.amountAdd:hover {
+  opacity: 0.8;
+}
+.amountReduce:hover {
+  background-color: #2f3a42;
+}
+.gameCon {
+  display: flex;
+  border-radius: 24px;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  padding: 30px 50px;
+}
+.pendingCont {
+  padding: 4px 48px;
+  border: 2px solid #707070;
+  display: flex;
+  width: min-content;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vh;
+  align-self: center;
+}
+.pendingT {
+  font-size: 14px;
+  color: #707070;
+  font-weight: 700;
+}
+.newDiceConDesktop {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+}
+.newDiceConMobile {
+  display: none;
+}
+.newDiceSelection {
+  display: flex;
+  flex-direction: column;
+}
+.containImg {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+}
+.betFieldDesktop {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.betFieldMobile {
+  display: none;
+}
+.amountValue {
+  background-color: #111316;
+  border-radius: 8px;
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #303030;
+}
+.amountButton {
+  background-color: #151a1e;
+  border: 1px solid #2f3a42;
+  height: 100%;
+  border-radius: 8px;
+  opacity: 1;
+  color: #101010;
+  font-size: 16px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.amounTotal {
+  color: white;
+  font-size: 24px;
+}
+
+.con p {
+  margin-bottom: 0 !important;
+}
+.con div {
+  box-sizing: unset;
+}
+
+.diceResCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.diceDivider {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.field {
+  display: flex;
+  align-items: center;
+}
+.title {
+  color: #c9d2d9;
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: 600;
+}
+.rollButton {
+  width: 70%;
+  padding: 5px 50px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.rollButton:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.rollButton:active {
+  opacity: 0.5;
+  transform: translateY(1px);
+  cursor: pointer;
+}
+.rollText {
+  color: #222222;
+  font-size: 24px;
+  font-weight: 800;
+}
+.colorGreen {
+  color: #069cc7 !important;
+}
+.textRow {
+  display: flex;
+  flex-direction: row;
+}
+.mobileDice {
+  display: none;
+  background-color: white;
+}
+
+.btnDice {
+  display: flex;
+  justify-content: center;
+  background-color: #224631 !important;
+  padding: 15px;
+  border-radius: 15px;
+  color: green;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.amountAdd {
+  padding: 7px;
+  background-color: lime;
+  border-radius: 10px;
+  opacity: 1;
+  color: white;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.amounCalculate {
+  padding: 5px;
+  background-color: lime;
+  border-radius: 10px;
+  opacity: 1;
+  color: white;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.amountAdd:hover {
+  opacity: 0.8;
+}
+.amountButton:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .betFieldDesktop {
+    display: none;
+  }
+
+  .betFieldMobile {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .newDiceConDesktop {
+    display: none;
+  }
+  .newDiceConMobile {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+  .gameLeft {
+    display: none;
+  }
+  .gameRight {
+    min-width: auto;
+    width: auto;
+  }
+  .mobileDice {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #151a1e;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 24px;
+  }
+  .gameCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    /* padding: 30px 50px; */
+  }
+  /* .con {
+    padding-top: 100px;
+  } */
+  .btnDice {
+    display: none;
+  }
+  .mobileBtnDice {
+    display: inline;
+    margin-top: 20px !important;
+    background-color: #224631 !important;
+    max-width: 150px;
+    padding: 10px;
+    width: 100%;
+    margin: auto auto 10px;
+    border-radius: 15px;
+    color: green;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+  }
+  .amountValue {
+    width: 30%;
+  }
+  .mobileWidth {
+    width: 30%;
+  }
+  .pendingCon {
+    display: none;
+  }
+}
+@media (min-width: 993px) {
+  .mobileDice {
+    display: none;
+  }
+  .mobileBtnDice {
+    display: none;
+  }
+}
