@@ -67,11 +67,21 @@ function Sidebar(props) {
                 <span className='icon'>
                   <AiOutlineHome className='mx-1' />
                 </span>
+<<<<<<< HEAD
                 <span className='title'>Home</span>
               </span>
               </Link>
             <Link>
               <span className='nav-tab' onClick={toggleGamesVisibility}>
+=======
+                <Link to='/'>
+                  <span className='title'>Home</span>
+                </Link>
+              </a>
+            </li>
+            <li>
+              <a className='nav-tab' onClick={toggleGamesVisibility}>
+>>>>>>> 0116e5179972baec0644bbdb3b92b3afe713b156
                 <span className='icon'>
                   <CgGames className='mx-1' />
                 </span>
@@ -92,17 +102,37 @@ function Sidebar(props) {
                     </span>
                     <span className='title'>Coinflip</span>
                   </span>
+<<<<<<< HEAD
               </Link>
               <Link to ="./games/dice">
                 <span className='nav-tab'>
+=======
+                  <Link to='./games/coin'>
+                    <span className='title'>Coinflip</span>
+                  </Link>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
+>>>>>>> 0116e5179972baec0644bbdb3b92b3afe713b156
                   <span className='icon'>
                     <BsDice3 className='mx-1' />
                   </span>
+<<<<<<< HEAD
                   <span className='title'>Dice</span>
                 </span>
               </Link>
               <Link>
                 <span className='nav-tab'>
+=======
+                  <Link to='./games/dice'>
+                    <span className='title'>Dice</span>
+                  </Link>
+                </a>
+              </li>
+              <li>
+                <a className='nav-tab'>
+>>>>>>> 0116e5179972baec0644bbdb3b92b3afe713b156
                   <span className='icon'>
                     <IoRocketOutline className='mx-1' />
                   </span>

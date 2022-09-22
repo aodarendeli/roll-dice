@@ -11,8 +11,8 @@
 }
 #coin {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 #coin div {
   width: 100%;
@@ -42,9 +42,9 @@
   position: absolute;
   color: #fff;
   font-family: OpenSansBold;
-  left: 42px;
-  top: 30px;
-  font-size: 25px;
+  left: 85px;
+  top: 63px;
+  font-size: 50px;
   margin: 0 !important;
 }
 .side-b {

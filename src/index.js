@@ -22,7 +22,7 @@ root.render(
       <PersistGate loading={null} persistor={persistedStore}>
         <App />
         <DefaultModal />
-      
+
         {/* <Dice/> */}
         <RightSidebar />
         <MobileRightSidebar />

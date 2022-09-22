@@ -22,7 +22,7 @@ export default ({state, theChoice, ind, flipping}) => {
   //{coinInd:ind,choice:'heads'}
   return (
     <div className='coinCon mx-auto'>
-      <p>{`Coin ${ind + 1}`}</p>
+      {/* <p>{`Coin ${ind + 1}`}</p> */}
       <div id='coin' className={result.res}>
         <div className='side-a mx-auto'>
           <img
