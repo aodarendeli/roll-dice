@@ -75,7 +75,6 @@
 .amountButton {
   background-color: #151a1e;
   border: 1px solid #2f3a42;
-  height: 100%;
   border-radius: 8px;
   opacity: 1;
   color: #101010;
@@ -113,12 +112,7 @@
   display: flex;
   align-items: center;
 }
-.title {
-  color: #c9d2d9;
-  font-size: 12px;
-  margin-left: 5px;
-  font-weight: 600;
-}
+
 .rollButton {
   width: 70%;
   padding: 5px 50px;
@@ -133,11 +127,6 @@
   opacity: 0.5;
   transform: translateY(1px);
   cursor: pointer;
-}
-.rollText {
-  color: #222222;
-  font-size: 24px;
-  font-weight: 800;
 }
 .colorGreen {
   color: #069cc7 !important;

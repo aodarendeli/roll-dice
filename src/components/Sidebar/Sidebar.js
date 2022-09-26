@@ -77,7 +77,7 @@ function Sidebar(props) {
       <div id='sidebar__container'>
         <nav>
           <ul>
-            <div className='text-center'>
+            <div className='text-center navControl'>
               <Logo className='toggle mt-1' />
               <BsFillPlayCircleFill
                 className={navActive ? 'mx-3 reverse' : 'regular'}
