@@ -71,9 +71,15 @@ nav ul a .icon {
   text-align: center;
 }
 
-nav ul a .title {
+#dark nav ul a .title {
   position: relative;
   font-size: 0.85em;
+}
+
+#light nav ul a .title {
+  position: relative;
+  font-size: 0.85em;
+  color:red
 }
 
 nav ul a .icon * {

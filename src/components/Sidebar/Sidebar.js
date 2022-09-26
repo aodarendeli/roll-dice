@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {AiOutlineHome} from 'react-icons/ai'
 import {CgGames} from 'react-icons/cg'
 import {BsCoin} from 'react-icons/bs'
@@ -14,6 +14,7 @@ import {IoStatsChartOutline} from 'react-icons/io5'
 import {TiContacts} from 'react-icons/ti'
 import {MdDarkMode} from 'react-icons/md'
 import {BsFillPlayCircleFill} from 'react-icons/bs'
+import {BsFillSunFill} from 'react-icons/bs'
 
 import './sidebar.css'
 import Logo from '../../svg/index'
@@ -23,23 +24,41 @@ import BlockChain from '../../svg/blockchain'
 import Select from '../../svg/select'
 import {Link} from 'react-router-dom'
 
+import {setTheme }from '../../Redux/Actions/themeAction'
+import { useDispatch } from 'react-redux'
+
 function Sidebar(props) {
+  const dispatch=useDispatch()
   const [gamesVisibility, setGamesVisibility] = useState(false)
   const [navActive, setNavActive] = useState(false)
+  const [themeState, setThemeState] = useState(
+    localStorage.getItem('theme') || 'dark'
+  )
+  useEffect(() => {
+    console.log('ilk hal storage:', localStorage.getItem('theme'))
+    console.log('ilk hal statw:', themeState)
+    !localStorage.getItem('theme') && localStorage.setItem('theme', 'dark')
+  }, [])
 
+  const toggleTheme = () => {
+    let theme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark'
+    theme === 'dark' ? setThemeState('dark') : setThemeState('light')
+    localStorage.setItem('theme', theme)
+    dispatch(setTheme(theme))
+    console.log('Theme:', theme)
+  }
   const handleClick = () => {
     let navValue = document.querySelector('nav')
     navValue.classList.toggle('active')
     setNavActive(!navActive)
     setGamesVisibility(false)
     props.setNav(!navActive)
-    console.log('tıkladın')
   }
   const toggleGamesVisibility = () => {
     setGamesVisibility(!gamesVisibility)
   }
   return (
-    <>
+    <div style={{zIndex: 9999}}>
       <header>
         <div className='mobile-sidebar'>SX</div>
         <div className='d-flex'>
@@ -139,7 +158,7 @@ function Sidebar(props) {
                     <SiNintendogamecube className='mx-1' />
                   </span>
                   <span className='title'>Roulette</span>
-                  {/* <span className='soon'>Soon</span> */}
+                  <span className='soon'>Soon</span>
                 </span>
               </Link>
               <Link>
@@ -186,17 +205,26 @@ function Sidebar(props) {
               </span>
             </Link>
             <Link>
-              <span className='nav-tab'>
-                <span className='icon'>
-                  <MdDarkMode className='mx-1' />
-                </span>
-                <span className='title'>Dark</span>
-              </span>
+                {themeState === 'dark' ? (
+                  <div className='nav-tab' onClick={toggleTheme}>
+                    <span className='icon'>
+                      <MdDarkMode className='mx-1' />
+                    </span>
+                    <span className='title'>Dark</span>
+                  </div>
+                ) : (
+                  <div className='nav-tab' onClick={toggleTheme}>
+                    <span className='icon'>
+                      <BsFillSunFill className='mx-1' />
+                    </span>
+                    <span className='title'>Light</span>
+                  </div>
+                )}
             </Link>
           </ul>
         </nav>
       </div>
-    </>
+    </div>
   )
 }
 
