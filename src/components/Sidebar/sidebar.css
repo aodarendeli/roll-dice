@@ -18,7 +18,7 @@ ul {
   z-index: 999999;
   border-right: 5px solid rgb(52, 185, 185);
 }
-#light nav{
+#light nav {
   position: fixed;
   width: 60px;
   height: 100%;
@@ -87,19 +87,16 @@ ul {
   text-decoration: none;
   color: #e5e5e5;
   transition: all ease 0.8s !important;
-
 }
-#dark nav ul .navControl{
+#dark nav ul .navControl {
   background-color: #222222;
   padding-bottom: 20px;
   padding-top: 10px;
 }
-#light nav ul .navControl{
+#light nav ul .navControl {
   background-color: #e5e5e5;
   padding-bottom: 20px;
   padding-top: 10px;
-
-
 }
 
 #light nav ul a {
@@ -111,10 +108,9 @@ ul {
   text-decoration: none;
   color: white;
   transition: all ease 0.8s !important;
-
 }
 
-#dark  nav ul a::before {
+#dark nav ul a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -122,10 +118,9 @@ ul {
   width: 0;
   height: 100%;
   transition: all ease 0.8s !important;
-
 }
 
-#light  nav ul a::before {
+#light nav ul a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -133,7 +128,6 @@ ul {
   width: 0;
   height: 100%;
   transition: all ease 0.8s !important;
-
 }
 
 #dark nav ul a .icon {

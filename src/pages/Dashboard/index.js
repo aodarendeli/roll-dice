@@ -7,7 +7,7 @@ function index() {
     <div className=''>
       <div className='text-center'>
         <div className='container d-flex'>
-           <div className='col-lg-8 col-md-12 col-sm-12 w-100'>
+          <div className='col-lg-8 col-md-12 col-sm-12 w-100'>
             <RollDice />
           </div>
           {/* <div className='col-4'>
