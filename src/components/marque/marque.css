@@ -110,9 +110,23 @@
   background-color: #030303 !important;
   border: 1px solid #030303;
   border-bottom-left-radius: 10px;
-  border-color: rgb(52, 185, 185);
   /* position: absolute;
   top: 0; */
+}
+.colorSx {
+  border-color: rgb(52, 185, 185);
+}
+.colorPol {
+  border-color: #8247e5;
+}
+.colorpSx {
+  color: rgb(52, 185, 185) !important;
+  margin: 0 !important;
+}
+.colorpPol {
+  color: #8247e5 !important;
+
+  margin: 0 !important;
 }
 .bootsrapt-svg {
   width: 30px;
@@ -157,6 +171,11 @@
 .wallet-dropdown svg {
   width: 20px;
   height: 20px;
+}
+.img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 @media (max-width: 992px) {

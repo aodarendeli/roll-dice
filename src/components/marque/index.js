@@ -11,6 +11,7 @@ import {BsVolumeUpFill, BsFillVolumeMuteFill} from 'react-icons/bs'
 import './marque.css'
 
 export default () => {
+  const [state, setState] = useState('sx')
   const [soundState, setSoundState] = useState(
     localStorage.getItem('sound') || 'on'
   )
@@ -57,14 +58,28 @@ export default () => {
       </Marquee>
 
       <Dropdown as={ButtonGroup}>
-        <div className='d-flex align-items-center bootstrapt-container'>
+        <div
+          className={
+            state === 'sx'
+              ? 'd-flex align-items-center bootstrapt-container colorSx'
+              : 'd-flex align-items-center bootstrapt-container colorPol'
+          }
+        >
           <Dropdown.Toggle
             className='bootstrapt-button ms-2'
             split
             variant='success'
             id='dropdown-split-basic'
           >
-            <Logo className='bootsrapt-svg mx-2' />
+            {state === 'sx' ? (
+              <Logo className='bootsrapt-svg mx-2' />
+            ) : (
+              <img
+                alt='poly'
+                src={require('../../assets/images/polygon.png')}
+                className='bootsrapt-svg mx-2'
+              />
+            )}
           </Dropdown.Toggle>
         </div>
 
@@ -75,15 +90,25 @@ export default () => {
 
         <Dropdown.Menu>
           <Dropdown.Item>
-            <div className='d-flex align-items-center wallet-dropdown'>
-              <Logo className='mx-2' />
-              <span>Polygon</span>
+            <div
+              className='d-flex align-items-center wallet-dropdown py-2'
+              onClick={() => setState('polygon')}
+            >
+              <img
+                alt='poly'
+                src={require('../../assets/images/polygon.png')}
+                className='img'
+              />
+              <p className='colorpPol'>Polygon</p>
             </div>
           </Dropdown.Item>
           <Dropdown.Item>
-            <div className='d-flex align-items-center wallet-dropdown'>
-              <Logo className='mx-2' />
-              <span>Sx Network</span>
+            <div
+              className='d-flex align-items-center wallet-dropdown py-2'
+              onClick={() => setState('sx')}
+            >
+              <Logo className='img' />
+              <p className='colorpSx'>Sx Network</p>
             </div>
           </Dropdown.Item>
         </Dropdown.Menu>
