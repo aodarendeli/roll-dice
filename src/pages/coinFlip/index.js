@@ -172,10 +172,7 @@ export default () => {
   }
   return (
     <>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-8'>
-            <div className={c.con}>
+            <div className={c.con + ' mt-4'}>
               <div className={c.gameCon}>
                 <div className={c.pendingCont}>
                   <p className={c.pendingT}>Pending</p>
@@ -371,10 +368,6 @@ export default () => {
                 )}
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
       {/* <div className={c.con + ' mt-5'}>
         <div className={c.gameCon}>
           <div className={c.mobileDice}>
