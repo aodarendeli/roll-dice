@@ -79,7 +79,7 @@ nav ul a .icon {
 #light nav ul a .title {
   position: relative;
   font-size: 0.85em;
-  color:red
+  color: red;
 }
 
 nav ul a .icon * {

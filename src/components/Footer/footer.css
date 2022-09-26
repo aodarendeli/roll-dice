@@ -21,3 +21,11 @@
   color: #3d3d3d;
   font-size: 14px;
 }
+#dark .footerTheme {
+  background-color: #101010;
+  transition: all ease 0.8s !important;
+}
+#light .footerTheme {
+  background-color: #e5e5e5;
+  transition: all ease 0.8s !important;
+}

@@ -6,6 +6,9 @@ import RollDice from './pages/rollDice'
 import CoinFlip from './pages/coinFlip'
 import Dashboard from './pages/Dashboard'
 import Menu from './components/Menu'
+import MobileRightSidebar from './components/MobileRightSideBar/MobileRightSidebar'
+import RightSidebar from './components/RightSidebar/RightSidebar'
+import Foooter from './components/Footer/Foooter'
 
 export const ThemeContext = createContext(null)
 
@@ -15,7 +18,7 @@ function App() {
   const themeVal = useSelector((selector) => selector?.themeReducer?.value)
 
   useEffect(() => {
-    console.log('themeVal:',themeVal)
+    console.log('themeVal:', themeVal)
     setTheme(themeVal || 'dark')
   }, [themeVal])
 
@@ -34,14 +37,19 @@ function App() {
   return (
     <div className='App' id={theme}>
       <Router>
-        <div className={theme}>
+        <>
           <Menu />
           <Routes>
             <Route path='/' element={<Dashboard />} />
             <Route path='/games/dice' element={<RollDice />} />
             <Route path='/games/coin' element={<CoinFlip />} />
           </Routes>
-        </div>
+          {/* <DefaultModal /> */}
+
+          <RightSidebar />
+          <MobileRightSidebar />
+          <Foooter />
+        </>
       </Router>
     </div>
   )

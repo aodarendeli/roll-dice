@@ -24,11 +24,11 @@ import BlockChain from '../../svg/blockchain'
 import Select from '../../svg/select'
 import {Link} from 'react-router-dom'
 
-import {setTheme }from '../../Redux/Actions/themeAction'
-import { useDispatch } from 'react-redux'
+import {setTheme} from '../../Redux/Actions/themeAction'
+import {useDispatch} from 'react-redux'
 
 function Sidebar(props) {
-  const dispatch=useDispatch()
+  const dispatch = useDispatch()
   const [gamesVisibility, setGamesVisibility] = useState(false)
   const [navActive, setNavActive] = useState(false)
   const [themeState, setThemeState] = useState(
@@ -205,21 +205,21 @@ function Sidebar(props) {
               </span>
             </Link>
             <Link>
-                {themeState === 'dark' ? (
-                  <div className='nav-tab' onClick={toggleTheme}>
-                    <span className='icon'>
-                      <MdDarkMode className='mx-1' />
-                    </span>
-                    <span className='title'>Dark</span>
-                  </div>
-                ) : (
-                  <div className='nav-tab' onClick={toggleTheme}>
-                    <span className='icon'>
-                      <BsFillSunFill className='mx-1' />
-                    </span>
-                    <span className='title'>Light</span>
-                  </div>
-                )}
+              {themeState === 'dark' ? (
+                <div className='nav-tab' onClick={toggleTheme}>
+                  <span className='icon'>
+                    <MdDarkMode className='mx-1' />
+                  </span>
+                  <span className='title'>Dark</span>
+                </div>
+              ) : (
+                <div className='nav-tab' onClick={toggleTheme}>
+                  <span className='icon'>
+                    <BsFillSunFill className='mx-1' />
+                  </span>
+                  <span className='title'>Light</span>
+                </div>
+              )}
             </Link>
           </ul>
         </nav>

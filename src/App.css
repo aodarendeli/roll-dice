@@ -1,15 +1,16 @@
-.App #dark {
+#dark {
   text-align: center;
-  background-color: #000;
-  transition:all ease .3s;
+  background: #101010 !important;
+  transition: all ease 0.8s !important;
 }
-.App #light {
+#light {
   text-align: center;
-  background-color: #fff;
-  transition:all ease .3s;
-
+  background: #e5e5e5 !important;
+  transition: all ease 0.8s !important;
 }
-
+#root {
+  transition: all ease 0.3s !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
