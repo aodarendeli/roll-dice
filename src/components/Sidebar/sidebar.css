@@ -1,28 +1,54 @@
-.sidebar__container {
+/* .sidebar__container {
   background-color: red;
-}
+} */
 
 ol,
 ul {
   padding-left: 0rem !important;
 }
 
-nav {
+#dark nav {
   position: fixed;
   width: 60px;
   height: 100%;
   background: #222222;
-  transition: 0.5s;
+  transition: all ease 0.8s !important;
+
+  overflow: hidden;
+  z-index: 999999;
+  border-right: 5px solid rgb(52, 185, 185);
+}
+#light nav{
+  position: fixed;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(52, 185, 185, 1) 50%,
+    rgba(34, 102, 212, 1) 100%
+  );
+  transition: all ease 0.8s !important;
+
   overflow: hidden;
   z-index: 999999;
   border-right: 5px solid rgb(52, 185, 185);
 }
 
-nav.active {
+#dark nav.active {
+  width: 180px;
+}
+#light nav.active {
   width: 180px;
 }
 
-nav ul {
+#dark nav ul {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+#light nav ul {
   position: relative;
   top: 0;
   left: 0;
@@ -30,19 +56,53 @@ nav ul {
   color: white;
 }
 
-nav ul a {
+#dark nav ul a {
+  list-style: none;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+#light nav ul a {
   list-style: none;
   width: 100%;
   color: white;
   position: relative;
 }
 
-nav ul a:hover a::before {
+#dark nav ul a:hover a::before {
+  background: #069cc7 0% 0% no-repeat padding-box;
+  width: 100%;
+}
+#light nav ul a:hover a::before {
   background: #069cc7 0% 0% no-repeat padding-box;
   width: 100%;
 }
 
-nav ul a {
+#dark nav ul a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e5e5e5;
+  transition: all ease 0.8s !important;
+
+}
+#dark nav ul .navControl{
+  background-color: #222222;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+#light nav ul .navControl{
+  background-color: #e5e5e5;
+  padding-bottom: 20px;
+  padding-top: 10px;
+
+
+}
+
+#light nav ul a {
   position: relative;
   display: block;
   width: 100%;
@@ -50,20 +110,40 @@ nav ul a {
   align-items: center;
   text-decoration: none;
   color: white;
-  transition: 0.2s;
+  transition: all ease 0.8s !important;
+
 }
 
-nav ul a::before {
+#dark  nav ul a::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
-  transition: 0.2s;
+  transition: all ease 0.8s !important;
+
 }
 
-nav ul a .icon {
+#light  nav ul a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all ease 0.8s !important;
+
+}
+
+#dark nav ul a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 40px;
+  text-align: center;
+}
+#light nav ul a .icon {
   position: relative;
   display: block;
   min-width: 60px;
@@ -75,53 +155,114 @@ nav ul a .icon {
   position: relative;
   font-size: 0.85em;
 }
+#light nav ul a .title {
+  position: relative;
+  font-size: 0.85em;
+}
 
 #light nav ul a .title {
   position: relative;
   font-size: 0.85em;
-  color: red;
+  color: white;
 }
 
-nav ul a .icon * {
+#dark nav ul a .icon * {
+  font-size: 1.1em;
+}
+#light nav ul a .icon * {
   font-size: 1.1em;
 }
 
-nav ul a.toggle {
+#dark nav ul a.toggle {
   border-bottom: 3px solid var(--bg-primary);
 }
 
-.toggle {
+#dark .toggle {
   cursor: pointer;
 }
-.reverse {
+#dark .reverse {
   transform: rotate(-180deg);
-  transition: ease 1s;
+  transition: all ease 0.8s !important;
+
   color: #069cc7;
   width: 30px;
   height: 30px;
   margin-top: 10px;
 }
-.regular {
-  transition: ease 1s;
+#dark .regular {
+  transition: all ease 0.8s !important;
+
   color: #069cc7;
   width: 30px;
   height: 30px;
 }
 
-header {
+#dark header {
   display: none;
 }
-header .mobile-sidebar {
+#dark header .mobile-sidebar {
   display: none;
 }
-.nav-tab {
+#dark .nav-tab {
   margin-top: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.soon {
+#dark .soon {
+  border-radius: 7px;
+  font-weight: 600;
+  color: black;
+  padding: 3px;
+  margin-left: 7px;
+  font-size: 10px;
+  background: rgb(52, 185, 185);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 185, 185, 1) 50%,
+    rgba(34, 102, 212, 1) 100%
+  );
+}
+
+#light nav ul a.toggle {
+  border-bottom: 3px solid var(--bg-primary);
+}
+
+#light .toggle {
+  cursor: pointer;
+}
+#light .reverse {
+  transform: rotate(-180deg);
+  transition: all ease 0.8s !important;
+
+  color: #069cc7;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+#light .regular {
+  transition: all ease 0.8s !important;
+
+  color: #069cc7;
+  width: 30px;
+  height: 30px;
+}
+
+#light header {
+  display: none;
+}
+#light header .mobile-sidebar {
+  display: none;
+}
+#light .nav-tab {
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+#light .soon {
   border-radius: 7px;
   font-weight: 600;
   color: black;

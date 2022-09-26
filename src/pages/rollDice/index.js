@@ -138,19 +138,19 @@ export default () => {
           <div className={c.betFieldDesktop} style={{marginTop: '18px'}}>
             <div>
               <p
-                style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}
+                className='tbet'
               >
                 Bet
               </p>
               <div>
-                <div className={c.amountValue}>
+                <div className={c.amountValue + ' amountValue'}>
                   <div
                     className={c.amountButton + ' gradientVertical'}
                     style={{marginRight: '30px'}}
                   >
                     Min
                   </div>
-                  <div className={c.amounTotal}>1000</div>
+                  <div className={c.amounTotal + ' amountTotal'}>1000</div>
                   <div
                     className={c.amountButton + ' gradientVertical'}
                     style={{marginLeft: '30px'}}
@@ -163,13 +163,13 @@ export default () => {
             <div>
               <div className='d-flex align-items-center'>
                 <Dollar />
-                <p className={c.title}>Multiplier:</p>
-                <p className={c.title + ' ' + c.colorGreen}></p>
+                <p className={c.title + ' title'}>Multiplier:</p>
+                <p className={c.title + ' title' + c.colorGreen}></p>
               </div>
               <div className='d-flex align-items-center'>
                 <Dollar />
-                <p className={c.title}>Win Amount:</p>
-                <p className={c.title + ' ' + c.colorGreen}></p>
+                <p className={c.title + ' title'}>Win Amount:</p>
+                <p className={c.title + ' title' + c.colorGreen}></p>
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default () => {
                 Bet
               </p>
               <div>
-                <div className={c.amountValue}>
+                <div className={c.amountValue + ' amountValue'}>
                   <div
                     className={c.amountButton + ' gradientVertical'}
                     style={{marginRight: '30px'}}
@@ -216,7 +216,7 @@ export default () => {
               className={c.rollButton + ' gradientHorizontal'}
               onClick={handleRoll}
             >
-              <p className={c.rollText}>ROLL!</p>
+              <p className={c.a+' rollText'}>ROLL!</p>
             </div>
           ) : (
             <div
