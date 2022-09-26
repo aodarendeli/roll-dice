@@ -71,7 +71,7 @@ export default () => {
           <div className={c.pendingCont}>
             <p className={c.pendingT}>Pending</p>
           </div>
-          <div className={c.newDiceConDesktop} style={{height:'200px'}}>
+          <div className={c.newDiceConDesktop} style={{height: '200px'}}>
             <div className={c.diceDivider}>
               <div className={c.newDiceSelection}>
                 <div className={c.diceDivider}>
@@ -97,7 +97,7 @@ export default () => {
                 disableIndividual
                 rollDone={handleRollDone}
                 ref={diceRef}
-                className="ozgur2"
+                className='ozgur2'
               />
             ) : (
               <img src={DiceImg} className={c.containImg} alt='contain' />
@@ -129,14 +129,13 @@ export default () => {
                 disableIndividual
                 rollDone={handleRollDone}
                 ref={diceRef}
-                className="ozgur"
-
+                className='ozgur'
               />
             ) : (
               <img src={DiceImg} className={c.containImg} alt='contain' />
             )}
           </div>
-          <div className={c.betFieldDesktop} style={{marginTop:'18px'}}>
+          <div className={c.betFieldDesktop} style={{marginTop: '18px'}}>
             <div>
               <p
                 style={{color: '#F0F0F0', fontSize: '20px', fontWeight: '600'}}

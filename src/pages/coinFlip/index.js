@@ -172,202 +172,202 @@ export default () => {
   }
   return (
     <>
-            <div className={c.con + ' mt-4'}>
-              <div className={c.gameCon}>
-                <div className={c.pendingCont}>
-                  <p className={c.pendingT}>Pending</p>
-                </div>
-                <div className={c.coinConDesktop}>
-                  {coinNum.map((item, index) => {
-                    if (index < 2) {
-                      return (
-                        <Coin
-                          key={index}
-                          state={coinNum[index]}
-                          ind={index}
-                          flipping={flipping}
-                          theChoice={(val) => {
-                            handleChoices(val)
-                          }}
-                        />
-                      )
-                    }
-                  })}
-                </div>
-                <div className={c.conRow2}>
-                  {coinNum.map((item, index) => {
-                    if (index > 1) {
-                      return (
-                        <Coin
-                          key={index}
-                          state={coinNum[index]}
-                          ind={index}
-                          flipping={flipping}
-                          theChoice={(val) => {
-                            handleChoices(val)
-                          }}
-                        />
-                      )
-                    }
-                  })}
-                </div>
+      <div className={c.con + ' mt-4'}>
+        <div className={c.gameCon}>
+          <div className={c.pendingCont}>
+            <p className={c.pendingT}>Pending</p>
+          </div>
+          <div className={c.coinConDesktop}>
+            {coinNum.map((item, index) => {
+              if (index < 2) {
+                return (
+                  <Coin
+                    key={index}
+                    state={coinNum[index]}
+                    ind={index}
+                    flipping={flipping}
+                    theChoice={(val) => {
+                      handleChoices(val)
+                    }}
+                  />
+                )
+              }
+            })}
+          </div>
+          <div className={c.conRow2}>
+            {coinNum.map((item, index) => {
+              if (index > 1) {
+                return (
+                  <Coin
+                    key={index}
+                    state={coinNum[index]}
+                    ind={index}
+                    flipping={flipping}
+                    theChoice={(val) => {
+                      handleChoices(val)
+                    }}
+                  />
+                )
+              }
+            })}
+          </div>
 
-                <div className={c.betFieldDesktop}>
-                  <div>
-                    <p
-                      style={{
-                        color: '#F0F0F0',
-                        fontSize: '20px',
-                        fontWeight: '600',
-                      }}
-                    >
-                      Bet
-                    </p>
-                    <div>
-                      <div className={c.amountValue}>
-                        <div
-                          className={c.amountButton + ' gradientVertical'}
-                          style={{marginRight: '30px'}}
-                        >
-                          Min
-                        </div>
-                        <div className={c.amounTotal}>1000</div>
-                        <div
-                          className={c.amountButton + ' gradientVertical'}
-                          style={{marginLeft: '30px'}}
-                        >
-                          Max
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p
-                      style={{
-                        color: '#F0F0F0',
-                        fontSize: '20px',
-                        fontWeight: '600',
-                      }}
-                    >
-                      Coins
-                    </p>
-                    <div className={c.coinNumBox + ' gradientVertical'}>
-                      {selectedNumber < 2 ? (
-                        <div className={c.circleDisabled + ' noselect'}>
-                          <p className={c.circleP}>-</p>
-                        </div>
-                      ) : (
-                        <div
-                          className={c.circle + ' noselect'}
-                          onClick={() => handleNumberOfCoins('decrease')}
-                        >
-                          <p className={c.circleP}>-</p>
-                        </div>
-                      )}
-                      <p style={{fontSize: '16px'}}>{selectedNumber}</p>
-                      {selectedNumber > 3 ? (
-                        <div className={c.circleDisabled + ' noselect'}>
-                          <p className={c.circleP}>+</p>
-                        </div>
-                      ) : (
-                        <div
-                          className={c.circle + ' noselect'}
-                          onClick={() => handleNumberOfCoins('increase')}
-                        >
-                          <p className={c.circleP}>+</p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className={c.betFieldMobile}>
-                  <div>
-                    <p
-                      className='mt-3'
-                      style={{
-                        color: '#F0F0F0',
-                        fontSize: '20px',
-                        fontWeight: '600',
-                      }}
-                    >
-                      Bet
-                    </p>
-                    <div>
-                      <div className={c.amountValue}>
-                        <div
-                          className={c.amountButton + ' gradientVertical'}
-                          style={{marginRight: '30px'}}
-                        >
-                          Min
-                        </div>
-                        <div className={c.amounTotal}>1000</div>
-                        <div
-                          className={c.amountButton + ' gradientVertical'}
-                          style={{marginLeft: '30px'}}
-                        >
-                          Max
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p
-                      className='mt-3'
-                      style={{
-                        color: '#F0F0F0',
-                        fontSize: '20px',
-                        fontWeight: '600',
-                      }}
-                    >
-                      Coins
-                    </p>
-                    <div className={c.coinNumBox + ' gradientVertical'}>
-                      {selectedNumber < 2 ? (
-                        <div className={c.circleDisabled + ' noselect'}>
-                          <p className={c.circleP}>-</p>
-                        </div>
-                      ) : (
-                        <div
-                          className={c.circle + ' noselect'}
-                          onClick={() => handleNumberOfCoins('decrease')}
-                        >
-                          <p className={c.circleP}>-</p>
-                        </div>
-                      )}
-                      <p style={{fontSize: '16px'}}>{selectedNumber}</p>
-                      {selectedNumber > 3 ? (
-                        <div className={c.circleDisabled + ' noselect'}>
-                          <p className={c.circleP}>+</p>
-                        </div>
-                      ) : (
-                        <div
-                          className={c.circle + ' noselect'}
-                          onClick={() => handleNumberOfCoins('increase')}
-                        >
-                          <p className={c.circleP}>+</p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {!betState ? (
+          <div className={c.betFieldDesktop}>
+            <div>
+              <p
+                style={{
+                  color: '#F0F0F0',
+                  fontSize: '20px',
+                  fontWeight: '600',
+                }}
+              >
+                Bet
+              </p>
+              <div>
+                <div className={c.amountValue}>
                   <div
-                    className={c.rollButton + ' gradientVertical'}
-                    onClick={handleBet}
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginRight: '30px'}}
                   >
-                    <p className={c.rollText}>FLIP!</p>
+                    Min
+                  </div>
+                  <div className={c.amounTotal}>1000</div>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginLeft: '30px'}}
+                  >
+                    Max
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p
+                style={{
+                  color: '#F0F0F0',
+                  fontSize: '20px',
+                  fontWeight: '600',
+                }}
+              >
+                Coins
+              </p>
+              <div className={c.coinNumBox + ' gradientVertical'}>
+                {selectedNumber < 2 ? (
+                  <div className={c.circleDisabled + ' noselect'}>
+                    <p className={c.circleP}>-</p>
                   </div>
                 ) : (
                   <div
-                    className={c.rollButton + ' gradientVertical'}
-                    onClick={handleBack}
+                    className={c.circle + ' noselect'}
+                    onClick={() => handleNumberOfCoins('decrease')}
                   >
-                    <p className={c.rollText}>BACK!</p>
+                    <p className={c.circleP}>-</p>
+                  </div>
+                )}
+                <p style={{fontSize: '16px'}}>{selectedNumber}</p>
+                {selectedNumber > 3 ? (
+                  <div className={c.circleDisabled + ' noselect'}>
+                    <p className={c.circleP}>+</p>
+                  </div>
+                ) : (
+                  <div
+                    className={c.circle + ' noselect'}
+                    onClick={() => handleNumberOfCoins('increase')}
+                  >
+                    <p className={c.circleP}>+</p>
                   </div>
                 )}
               </div>
             </div>
+          </div>
+          <div className={c.betFieldMobile}>
+            <div>
+              <p
+                className='mt-3'
+                style={{
+                  color: '#F0F0F0',
+                  fontSize: '20px',
+                  fontWeight: '600',
+                }}
+              >
+                Bet
+              </p>
+              <div>
+                <div className={c.amountValue}>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginRight: '30px'}}
+                  >
+                    Min
+                  </div>
+                  <div className={c.amounTotal}>1000</div>
+                  <div
+                    className={c.amountButton + ' gradientVertical'}
+                    style={{marginLeft: '30px'}}
+                  >
+                    Max
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p
+                className='mt-3'
+                style={{
+                  color: '#F0F0F0',
+                  fontSize: '20px',
+                  fontWeight: '600',
+                }}
+              >
+                Coins
+              </p>
+              <div className={c.coinNumBox + ' gradientVertical'}>
+                {selectedNumber < 2 ? (
+                  <div className={c.circleDisabled + ' noselect'}>
+                    <p className={c.circleP}>-</p>
+                  </div>
+                ) : (
+                  <div
+                    className={c.circle + ' noselect'}
+                    onClick={() => handleNumberOfCoins('decrease')}
+                  >
+                    <p className={c.circleP}>-</p>
+                  </div>
+                )}
+                <p style={{fontSize: '16px'}}>{selectedNumber}</p>
+                {selectedNumber > 3 ? (
+                  <div className={c.circleDisabled + ' noselect'}>
+                    <p className={c.circleP}>+</p>
+                  </div>
+                ) : (
+                  <div
+                    className={c.circle + ' noselect'}
+                    onClick={() => handleNumberOfCoins('increase')}
+                  >
+                    <p className={c.circleP}>+</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {!betState ? (
+            <div
+              className={c.rollButton + ' gradientVertical'}
+              onClick={handleBet}
+            >
+              <p className={c.rollText}>FLIP!</p>
+            </div>
+          ) : (
+            <div
+              className={c.rollButton + ' gradientVertical'}
+              onClick={handleBack}
+            >
+              <p className={c.rollText}>BACK!</p>
+            </div>
+          )}
+        </div>
+      </div>
       {/* <div className={c.con + ' mt-5'}>
         <div className={c.gameCon}>
           <div className={c.mobileDice}>
