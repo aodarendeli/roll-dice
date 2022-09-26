@@ -1,10 +1,13 @@
 .App #dark {
   text-align: center;
   background-color: #000;
+  transition:all ease .3s;
 }
 .App #light {
   text-align: center;
   background-color: #fff;
+  transition:all ease .3s;
+
 }
 
 .App-logo {
